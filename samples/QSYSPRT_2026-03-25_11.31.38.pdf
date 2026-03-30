@@ -1,0 +1,260 @@
+%PDF-1.4
+%ÿÿÿÿ
+1 0 obj << /Type Catalog /Pages 2 0 R >>
+endobj
+3 0 obj << /Type Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 5 0 R /Parent 2 0 R >>
+endobj
+5 0 obj << /Length 5014 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+(5770SS1 V7R5M0 220415                                         HELP                               26-03-25  11:31:38     Page     1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 549.751 Tm
+(                                               Control character \(CTLCHAR\) - Help) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 549.751 Tm
+(                                               Control character \(CTLCHAR\) - Help) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 549.751 Tm
+(                                               Control character \(CTLCHAR\) - Help) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 549.751 Tm
+(                                               Control character \(CTLCHAR\) - Help) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(         Specifies which print control characters \(if any\) are to replace) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(         the spooled file's internal print control characters. This) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(         parameter is ignored if the Workstation customizing object \(WSCST\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                                     Workstation customizing object \(WSCST\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                                     Workstation customizing object \(WSCST\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                                     Workstation customizing object \(WSCST\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(         parameter is specified and is not *NONE.) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(         _____) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(         *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(         *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(         *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(         *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(             No print control characters are created.) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(         *FCFC) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(         *FCFC) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(         *FCFC) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(         *FCFC) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(             Specifies that the first character of every record contains one) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(             of the ANSI forms control codes. This option may be useful for) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(             microfiche production. For more information regarding the ANSI) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(             forms control codes, see the Basic printing topic collection in) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(             the Printing category in the IBM i Information Center at) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(             http://www.ibm.com/systems/i/infocenter/.) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(         *PRTCTL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(         *PRTCTL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(         *PRTCTL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(         *PRTCTL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(             Specifies that the first four characters of every record) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(             contains skip- and space-before values useful in high-level) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(             language programs.  This code can be viewed as SSSL, where SSS) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(             is the skip-before line value and L is the space-before value.) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(         *S36FMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(         *S36FMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(         *S36FMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(         *S36FMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(             Specifies that the format of the records to be copied to a) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(             database file is the same as that created on the IBM System/36) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(             for COPYPRT.  This value is not allowed for spooled files which) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(             exist on primary or secondary auxiliary storage pools.) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(                                       * * * * *   E N D   O F   L I S T I N G   * * * * *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+6 0 obj << /Author (ANGO) /CreationDate (D:20260325113138) /Creator (RPDFGCVT https://ag1965.github.com/RPDFG) /Producer (RPDFG Compiled (D:260330131104) IBMi) >>
+endobj
+2 0 obj << /Type Pages /Kids [ 4 0 R ] /Count 1 >>
+endobj
+xref
+0 7
+0000000000 65535 f
+0000000017 00000 n
+0000005512 00000 n
+0000000067 00000 n
+0000000136 00000 n
+0000000271 00000 n
+0000005340 00000 n
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+5572
+%%EOF
