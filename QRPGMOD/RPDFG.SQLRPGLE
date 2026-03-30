@@ -88,6 +88,7 @@ Dcl-C  POINTS_IN_1_INCH  72.0000;
 Dcl-C  BORDER_IN_POINTS  14.1732; // 5mm in points (1/72 inch)
 
 Dcl-ENum PAGRTT QUALIFIED;
+   SPLFA             '*SPLFA';
    AUTO              '*AUTO';
    DEVD              '*DEVD';
    COR               '*COR';
@@ -769,9 +770,10 @@ End-Proc;
 // -----------------------------------------------------------------------------
 Dcl-Proc RPDFG_calculatePrintingValues  EXPORT;
    Dcl-PI *n;
-      p_Page_Rotation     VARCHAR( 5)   CONST;
-      p_Page_Length           INT(10)   CONST;
-      p_Page_Width            INT(10)   CONST;
+      p_Override_Page_Rotation        CHAR(10)   CONST;
+      p_Page_Rotation              VARCHAR( 5)   CONST;
+      p_Page_Length                    INT(10)   CONST;
+      p_Page_Width                     INT(10)   CONST;
    End-PI;
 
    Dcl-ENum ORIENTATION QUALIFIED;
@@ -782,19 +784,28 @@ Dcl-Proc RPDFG_calculatePrintingValues  EXPORT;
    Dcl-S h_FontSize_A  PACKED(8:3);
    Dcl-S h_FontSize_B  PACKED(8:3);
 
-   Dcl-S h_Orientation CHAR(1);
+   Dcl-S h_PageRotation CHAR(10);
+   Dcl-S h_Orientation  CHAR( 1);
+
+   // -------------------------------------------------
+   IF p_Override_Page_Rotation = PAGRTT.SPLFA;
+      h_PageRotation = p_Page_Rotation;
+   ELSE;
+      h_PageRotation = p_Override_Page_Rotation;
+   ENDIF;
+
 
    SELECT;
-      WHEN p_Page_Rotation = PAGRTT.PORTRAIT;
+      WHEN h_Page_Rotation = PAGRTT.PORTRAIT;
          h_Orientation = ORIENTATION.P;
          g_PDF.Rotate = 0;
-      WHEN p_Page_Rotation = PAGRTT.PORTRAIT_REVERSE;
+      WHEN h_Page_Rotation = PAGRTT.PORTRAIT_REVERSE;
          h_Orientation = ORIENTATION.P;
          g_PDF.Rotate = 180;
-      WHEN p_Page_Rotation = PAGRTT.LANDSCAPE;
+      WHEN h_Page_Rotation = PAGRTT.LANDSCAPE;
          h_Orientation = ORIENTATION.L;
          g_PDF.Rotate = 90;
-      WHEN p_Page_Rotation = PAGRTT.LANDSCAPE_REVERSE;
+      WHEN h_Page_Rotation = PAGRTT.LANDSCAPE_REVERSE;
          h_Orientation = ORIENTATION.L;
          g_PDF.Rotate = 270;
       OTHER;

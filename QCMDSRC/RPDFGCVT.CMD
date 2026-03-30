@@ -26,6 +26,10 @@
                                  US_INVOICE US_EXECUTIVE US_LEGAL US_LETTER US_LEDGER) +
                           PROMPT(CMD0009)
 
+             PARM      KWD(PAGRTT) TYPE(*CHAR) LEN(10) RSTD(*YES) DFT(*SPLFA) +
+                          VALUES(*SPLFA *AUTO 0 90 180 270) +
+                          PROMPT(CMD0022) 
+
              PARM      KWD(MARGINS) TYPE(MARGINS)  +
                           PROMPT(CMD0010) 
 

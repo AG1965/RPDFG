@@ -13,6 +13,7 @@ Dcl-PR MAIN EXTPGM('RPDFGCVT');
    PDF_Path     VARCHAR(128) CONST;
    PDF_File     VARCHAR(128) CONST;
    PaperFormat  VARCHAR( 20) CONST;
+   PageRotation    CHAR( 10) CONST;
    Margins       LIKEDS(RPDFG_Margins_T) CONST;
    TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
 End-PR;
@@ -110,6 +111,7 @@ Dcl-Proc MAIN;
       p_PDF_Path     VARCHAR(128) CONST;
       p_PDF_File     VARCHAR(128) CONST;
       p_PaperFormat  VARCHAR( 20) CONST;
+      p_PageRotation    CHAR( 10) CONST;
       p_Margins       LIKEDS(RPDFG_Margins_T)  CONST;
       p_TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
    End-PI;
@@ -327,7 +329,8 @@ Dcl-Proc MAIN;
    // ==========================================================================
    // --------------------------------------------------------------------------
    // actual PDF creation
-   RPDFG_calculatePrintingValues(SplfAtr(1).Page_Rotation:
+   RPDFG_calculatePrintingValues(p_PageRotation:
+                                 SplfAtr(1).Page_Rotation:
                                  SplfAtr(1).Page_Length:
                                  SplfAtr(1).Page_Width);
 

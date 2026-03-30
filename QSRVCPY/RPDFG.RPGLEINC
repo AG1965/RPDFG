@@ -87,9 +87,10 @@ Dcl-PR RPDFG_initPaperFormat  EXTPROC(*DCLCASE);
 End-PR;
 
 Dcl-PR RPDFG_calculatePrintingValues EXTPROC(*DCLCASE);
-   Page_Rotation    LIKE(RPDFG_SplfAtr_T.Page_Rotation) CONST;
-   Page_Length      LIKE(RPDFG_SplfAtr_T.Page_Length)   CONST;
-   Page_Width       LIKE(RPDFG_SplfAtr_T.Page_Width)    CONST;
+   Override_Page_Rotation    CHAR(10) CONST;
+   Page_Rotation             LIKE(RPDFG_SplfAtr_T.Page_Rotation) CONST;
+   Page_Length               LIKE(RPDFG_SplfAtr_T.Page_Length)   CONST;
+   Page_Width                LIKE(RPDFG_SplfAtr_T.Page_Width)    CONST;
 End-PR;
 
 // get the font size

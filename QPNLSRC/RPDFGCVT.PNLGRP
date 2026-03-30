@@ -122,8 +122,6 @@ file attributes into the file name.
 :HELP   NAME='RPDFGCVT/PAPERSIZE'.Paper size
 :P.:XH3.Paper size (PAPERSIZE)
 :P.Specifies the size of the paper.
-                          VALUES(A3 A4 A5 +
-                                 US_INVOICE US_EXECUTIVE US_LEGAL US_LETTER US_LEDGER) +
 :DL.
 :DTHD.Paper size name
 :DDHD.Measurements
@@ -144,6 +142,28 @@ file attributes into the file name.
 :DT.US_LEDGER
 :DD.11 in x 17 in (279 mm x 432 mm)
 :EDL.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/PAGRTT'.Degree of page rotation
+:P.:XH3.Degree of page rotation (PAGRTT)
+:P.Specifies the degree of rotation of the text on the page with       
+respect to the way the form is loaded into the printer.             
+:PARML.
+:PT.:PV.*SPLFA:EPV.
+:PD.Use the spooled file attribute PAGRTT, if it fits to one of the following,
+otherwise *AUTO is used.
+:PT.:PV.*AUTO:EPV.
+:PD.When the page width is larger than the page length, the page is rotated 90 degrees. 
+Otherwise, no rotation is done.
+:PT.:PV.0:EPV.
+:PD.No rotation is done.
+:PT.:PV.90:EPV.
+:PD.The text is rotated 90 degrees.
+:PT.:PV.180:EPV.
+:PD.The text is rotated 180 degrees.
+:PT.:PV.270:EPV.
+:PD.The text is rotated 270 degrees.
+:EPARML.
 :EHELP.
 .*---------------------------------------------------------------------
 :HELP   NAME='RPDFGCVT/MARGINS'.Margins
