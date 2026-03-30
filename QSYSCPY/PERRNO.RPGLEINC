@@ -1,0 +1,7 @@
+     P errno           B                                     
+     D errno           PI            10I 0                   
+     D p_errno         S               *                     
+     D wwreturn        S             10I 0 based(p_errno)    
+     C                   eval      p_errno = sys_errno       
+     c                   return    wwreturn                  
+     P                 E                                     

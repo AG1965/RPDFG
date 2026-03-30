@@ -1,0 +1,12 @@
+{
+  "indent": 3,
+  "PrototypeCheck": true,
+  "NoOCCURS": true,
+  "NoSELECTAll": true,
+  "UppercaseConstants": true,
+  "IncorrectVariableCase": true,
+  "NoSQLJoins": false,
+  "PrettyComments": true,
+  "NoGlobalSubroutines": true,
+  "NoExternalTo": [ ]
+}

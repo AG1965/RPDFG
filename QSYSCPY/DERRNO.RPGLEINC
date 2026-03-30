@@ -1,0 +1,113 @@
+**FREE
+/IF DEFINED(DERRNO)
+/EOF
+/ENDIF
+/DEFINE DERRNO
+
+
+Dcl-PR sys_errno pointer ExtProc('__errno');
+End-PR sys_errno;
+
+Dcl-PR strerror pointer ExtProc('strerror');
+   errnum     int(10) value;
+End-PR strerror;
+
+Dcl-PR perror  ExtProc('perror');
+   comment    pointer value options(*string);
+End-PR perror;
+
+Dcl-PR errno  int(10) ExtProc(*DCLCASE);
+End-PR errno;
+
+Dcl-s errnoS4 zoned(4:0);
+
+// **********************************************************************
+// * Error Numbers   (use DSPMSGD CPEnnnn to display the text)          *
+// **********************************************************************
+Dcl-ENum IFS_ERROR_NUMBERS;
+
+   #ENOENT             3025; // 3025 No path or library with this name
+   #EACCESS            3401; // 3401 Permission denied
+   #ENOTDIR            3403; // 3403 Not a directory.
+   #ENOSPC             3404; // 3404 No space available.
+   #EXDEV              3405; // 3405 Improper link.
+   #EWOULDBLOCK        3406; // 3406 Operation would have caused the process to be suspended.
+   #EAGAIN             3406; // 3406
+   #EINTERRUPT         3407; // 3407 Interrupted function call.
+   #EFAULT             3408; // 3408 The address used for an argument was not correct.
+   #ETIMEOUT           3409; // 3409 Operation timed out.
+   #ENXIO              3415; // 3415 No such device or address
+   #EADDRINUS          3420; // 3420 Address already in use.
+   #EADDRNOTAVAIL      3421; // 3421 Address not available.
+   #EAFNOSUPPORT       3422; // 3422 The type of socket is not supported
+   #EALREADY           3423; // 3423 Operation already in progress.
+   #ECONNABORTED       3424; // 3424 Connection ended abnormally.
+   #ECONNREFUSED       3425; // 3425 A remote host refused an attempted
+   #ECONNRESET         3426; // 3426 A connection with a remote socket w
+   #EDESTADDRREQ       3427; // 3427 Operation requires destination addr
+   #EHOSTDOWN          3428; // 3428 A remote host is not available.
+   #EHOSTUNREACH       3429; // 3429 A route to the remote host is not a
+   #EINPROGRESS        3430; // 3430 Operation in progress.
+   #EISCONN            3431; // 3431 A connection has already been estab
+   #EMSGSIZE           3432; // 3432 Message size out of range.
+   #ENETDOWN           3433; // 3433 The network is not currently availa
+   #ENETRESET          3434; // 3434 The network is not currently availa
+   #ENETUNREACH        3435; // 3435 A socket is connected to a host tha
+   #ENOBUFS            3436; // 3436 There is not enough buffer space fo
+   #ENOPROTOOPT        3437; // 3437 The protocol does not support the s
+   #ENOTCONN           3438; // 3438 Requested operation requires a conn
+   #ENOTSOCK           3439; // 3439 The specified descriptor does not r
+   #ENOTSUP            3440; // 3440 Operation not supported.
+   #EOPNOTSUPP         3440; // 3440 Operation not supported.
+   #EPFNOSUPPORT       3441; // 3441 The socket protocol family is not supported.
+   #EPROTONOSUPPORT    3442; // 3442 No protocol of the specified type and domain exists.
+   #EPROTOTYPE         3443; // 3443 The socket type or protocols are not compatible.
+   #ERCVDERR           3444; // 3444 An error indication was sent by the
+   #ESHUTDOWN          3445; // 3445 Cannot send data after a shutdown.
+   #ESOCKTNOSUPPORT    3446; // 3446 The specified socket type is not su
+   #ETIMEDOUT          3447; // 3447 A remote host did not respond within a reasonable time.
+   #EUNATCH            3448; // 3448 The protocol required to support the specified address 
+   //                                family is not available at this time.
+   #EBADF              3450; // 3450 Descriptor not valid.
+   #EMFILE             3452; // 3452 Too many open files for this proces
+   #ENFILE             3453; // 3453 Too many open files in the system.
+   #EPIPE              3455; // 3455 Broken pipe.
+   #EEXIST             3457; // 3457 File exists.
+   #EDEADLK            3459; // 3459 Resource deadlock avoided.
+   #ENOMEM             3460; // 3460 Storage allocation request failed.
+   #EOWNERTERM         3462; // 3462 The mutex no longer exists because
+   #EDESTROYED         3463; // 3463 The mutex was destroyed, or the obj
+   #ETERM              3464; // 3464 Operation terminated.
+   #EMLINK             3468; // 3468 Maximum link count for a file was e
+   #ESPIPE             3469; // 3469 Seek request not supported for obje
+   #ENOSYS             3470; // 3470 Function not implemented.
+   #EISDIR             3471; // 3471 Specified target is a directory.
+   #EROFS              3472; // 3472 Read-only file system.
+   #EUNKNOWN           3474; // 3474 Unknown system state.
+   #EITERBAD           3475; // 3475 Iterator is invalid.
+   #EDAMAGE            3484; // 3484 A damaged object was encountered.
+   #ELOOP              3485; // 3485 A loop exists in the symbolic links.
+   #ENAMETOOLONG       3486; // 3486 A path name is too long.
+   #ENOLCK             3487; // 3487 No locks available
+   #ENOTEMPTY          3488; // 3488 Directory not empty.
+   #ENOSYSRSC          3489; // 3489 System resources not available to c
+   #ECONVERT           3490; // 3490 Conversion error.
+   #E2BIG              3491; // 3491 Argument list too long.
+   #EILSEQ             3492; // 3492 Conversion stopped due to input cha
+   #ENOTENROLL         3498; // 3498 User not enrolled in system distrib
+   #EOFFLINE           3499; // 3499 Object is suspended.
+   #EROOBJ             3500; // 3500 Object is a read only object.
+   #ELOCKED            3506; // 3506 Area being read from or written to
+   #EFBIG              3507; // 3507 Object too large.
+   #EIDRM              3509; // 3509 The semaphore, shared memory, or me
+   #ENOMSG             3510; // 3510 The queue does not contain a messag
+   #EFILECVT           3511; // 3511 File ID conversion of a directory f
+   #EBADFID            3512; // 3512 A File ID could not be assigned whe
+   #ESTALE             3513; // 3513 A File ID could not be assigned whe
+   #ESRCH              3515; // 3515 No such process.
+   #ENOTSIGINIT        3516; // 3516 Process not enabled for signals.
+   #ECHILD             3517; // 3517 No child process.
+   #ETOOMANYREFS       3523; // 3523 Too many references.
+   #ENOTSAFE           3524; // 3524 Function not allowed.
+
+End-ENum;

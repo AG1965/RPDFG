@@ -1,0 +1,150 @@
+:PNLGRP.
+:COPYR.2026 Anton Gombkötö
+.*---------------------------------------------------------------------
+:HELP   NAME=RPDFGCVT.Convert a spooled file to a PDF file.
+:P.This command is able to convert the text contents of a SCS spooled
+file to a PDF file. The PDF file is created in the IFS.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/FILE'.Spooled file name
+:P.:XH3.Spooled file (FILE)
+:P.Specifies the spooled file that is to be converted to PDF and written
+to a stream file.
+:P.This is a required parameter.
+:PARML.
+:PT.name
+:PD.Specify the file name of the spooled file.
+:EPARML.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/JOB'.Job name
+:P.:XH3.Job name (JOB)
+:P.Specifies the job that created the spooled file whose data records
+are to be converted to PDF and written to a stream file.
+:P.:HP2.Single values:EHP2.
+:PARML.
+:PT.:PK def.*:EPK.
+:PD.The job that issued this command is the job that created the
+spooled file.
+:EPARML.
+:P.
+:HP2.Qualifier 1: Job name:EHP2.
+:PARML.
+:PT.:PV.name:EPV.
+:PD.Specify the name of the job that created the spooled file.
+:EPARML.
+:P.
+:HP2.Qualifier 2: User:EHP2.
+:PARML.
+:PT.:PV.name:EPV.
+:PD.Specify the user name that identifies the user profile under
+which the job is run.
+:EPARML.
+:P.
+:HP2.Qualifier 3: Number:EHP2.
+:PARML.
+:PT.:PV.000000-999999:EPV.
+:PD.Specify the system-assigned job number.
+:EPARML.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/SPLNBR'.Spooled file number
+:P.:XH3.Spooled file number (SPLNBR)
+:P.Specifies the number of the spooled file, from the job whose data
+records are to be copied.
+:PARML.
+:PT.:PK def.*LAST:EPK.
+:PD.The spooled file with the highest number and the specified file
+name is used.
+:PT.:PK.*ONLY:EPK.
+:PD.Only one spooled file in the job has the specified file name;
+therefore, the number of the spooled file is not necessary.
+:PT.:PK.*ANY:EPK.
+:PD.The spooled file number is not used to determine which spooled
+file is used. Use this value when the job system name parameter
+or the spooled file create date and time parameter is to take
+precedence over the spooled file number when selecting a spooled
+file.
+:PT.:PV.1-999999:EPV.
+:PD.Specify the number of the spooled file whose data records are to
+be copied.
+:EPARML.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/PDFDIR'.Directory for PDF file
+:P.:XH3.Directory for pdf file (PDFDIR)
+:P.Specifies the directory in the IFS where the PDF file is to be created.
+:PARML.
+:PT.:PV.path:EPV.
+:PD.An absolute or relative path with directories separated by the slash (/).
+:NT.If any of the directories in the path does not exist, it is created.:ENT.
+:EPARML.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/PDFNAME'.pdf file name
+:P.:XH3.Pdf file name (PDFNAME)
+:P.Specifies the name of the PDF file to be created.
+:P.:HP2.Keywords to insert spooled file attributes:EHP2.
+:P.Enter keywords enclosed by < and > to insert values of the spooled 
+file attributes into the file name.
+:DL.
+:DTHD.keyword
+:DDHD.replacement value
+:DT.<FILE>
+:DD.The name of the spooled file.
+:DT.<JOB>
+:DD.The name, user and number of the job that created the spooled file.
+:DT.<JOBNAM>
+:DD.The name of the job that created the spooled file.
+:DT.<JOBUSR>
+:DD.The name of the job that created the spooled file.
+:DT.<JOBNBR>
+:DD.The number of the job that created the spooled file.
+:DT.<USER>
+:DD.The user of the spooled file.
+:DT.<USRDTA>
+:DD.The user data attribute of the spooled file.
+:DT.<FORMTYPE>
+:DD.The form type attribute of the spooled file.
+:DT.<OUTQNAME>
+:DD.The name of the output queue the spooled file is in.
+:DT.<OUTQLIB>
+:DD.The library of the output queue the spooled file is in.
+:DT.<CRTDATE>
+:DD.The creation date of the spooled file.
+:DT.<CRTTIME>
+:DD.The creation time of the spooled file.
+:DT.<CRTTIMESTAMP>
+:DD.The creation timestamp of the spooled file.
+:EDL.
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/PAPERSIZE'.Paper size
+:P.:XH3.Paper size (PAPERSIZE)
+:P.Specifies the size of the paper.
+                          VALUES(A3 A4 A5 +
+                                 US_INVOICE US_EXECUTIVE US_LEGAL US_LETTER US_LEDGER) +
+:DL.
+:DTHD.Paper size name
+:DDHD.Measurements
+:DT.A3
+:DD.297 mm x 420 mm (11.7 in x 16.5 in)
+:DT.A4
+:DD.210 mm x 297 mm (8.3 in x 11.7 in)
+:DT.A5
+:DD.148 mm x 210 mm (5.8 in x 8.3 in)
+:DT.US_INVOICE
+:DD.8.5 in x 11 in (216 mm x 279 mm)
+:DT.US_EXECUTIVE
+:DD.7.25 in x 10.5 in (184 mm x 267 mm)
+:DT.US_LEGAL
+:DD.8.5 in x 14 in (216 mm x 356 mm)
+:DT.US_LETTER
+:DD.8.5 in x 11 in (216 mm x 279 mm)
+:DT.US_LEDGER
+:DD.11 in x 17 in (279 mm x 432 mm)
+:EDL.
+:EHELP.
+.*---------------------------------------------------------------------
+:EPNLGRP.
+.*---------------------------------------------------------------------

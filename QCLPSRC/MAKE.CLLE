@@ -1,0 +1,213 @@
+PGM (&LIB)
+
+DCL VAR(&LIB)        TYPE(*CHAR) LEN( 10)
+DCL VAR(&ERRMSGID)   TYPE(*CHAR) LEN( 10)
+DCL VAR(&ERRMSGF)    TYPE(*CHAR) LEN( 10)
+DCL VAR(&ERRMSGFLIB) TYPE(*CHAR) LEN( 10)
+DCL VAR(&ERRMSGDTA)  TYPE(*CHAR) LEN(512)
+
+/* -------------------------------------------------------------------------- */
+MONMSG MSGID(CPF0000) EXEC(GOTO CMDLBL(ERROR))
+/* -------------------------------------------------------------------------- */
+/* CRTLIB LIB(&LIB) TEXT('RPDFG - Generate PDF with RPG') */
+/* MONMSG CPF0000 */
+
+CRTBNDDIR  BNDDIR(&LIB/RPDFG)
+MONMSG CPF0000
+ADDBNDDIRE BNDDIR(&LIB/RPDFG) +             
+           OBJ((&LIB/RPDFG *SRVPGM *IMMED))
+MONMSG CPF0000
+/* -------------------------------------------------------------------------- */
+CRTSRCPF FILE(&LIB/QPNLSRC)
+MONMSG CPF0000
+CPYFRMSTMF FROMSTMF('QPNLSRC/RPDFGCVT.PNLGRP') +
+           TOMBR('/QSYS.LIB/' *CAT &LIB *TCAT +
+                 '.LIB/QPNLSRC.FILE/RPDFGCVT.MBR') +
+           MBROPT(*REPLACE)
+CRTPNLGRP PNLGRP(&LIB/RPDFGCVT) SRCFILE(&LIB/QPNLSRC)
+/* -------------------------------------------------------------------------- */
+
+DLTMSGF MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+CRTMSGF MSGF(&LIB/RPDFGMSGF) TEXT('RPDFG - Generate PDF with RPG')
+
+RMVMSGD MSGID(CMD0001) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0001) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Convert spooled file to PDF')
+
+RMVMSGD MSGID(CMD0002) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0002) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Spooled file')
+
+RMVMSGD MSGID(CMD0003) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0003) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Job name')
+
+RMVMSGD MSGID(CMD0004) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0004) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Spooled file number')
+
+RMVMSGD MSGID(CMD0005) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0005) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Directory for pdf file')
+
+RMVMSGD MSGID(CMD0006) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0006) MSGF(&LIB/RPDFGMSGF) +
+        MSG('pdf file name')
+
+RMVMSGD MSGID(CMD0007) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0007) MSGF(&LIB/RPDFGMSGF) +
+        MSG('User')
+
+RMVMSGD MSGID(CMD0008) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0008) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Number')
+
+RMVMSGD MSGID(CMD0009) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0009) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Paper Size')
+
+RMVMSGD MSGID(CMD0010) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0010) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Margins')
+
+RMVMSGD MSGID(CMD0011) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0011) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Left . . . . . . . . . . .  pt')
+
+RMVMSGD MSGID(CMD0012) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0012) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Top  . . . . . . . . . . .  pt')
+
+RMVMSGD MSGID(CMD0013) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0013) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Right  . . . . . . . . . .  pt')
+
+RMVMSGD MSGID(CMD0014) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(CMD0014) MSGF(&LIB/RPDFGMSGF) +
+        MSG('Bottom . . . . . . . . . .  pt')
+
+
+RMVMSGD MSGID(RPDF001) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF001) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Spooled file &1, Job &4/&3/&2, number &5, not found.') +
+        SEV(40) +
+        FMT((*CHAR 10) (*CHAR 10) (*CHAR 10) (*CHAR 6) (*CHAR 5))
+
+RMVMSGD MSGID(RPDF002) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF002) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('More than 1 spooled file &1 exists in Job &4/&3/&2, number &5.') +
+        SEV(40) +
+        FMT((*CHAR 10) (*CHAR 10) (*CHAR 10) (*CHAR 6) (*CHAR 5))
+
+RMVMSGD MSGID(RPDF003) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF003) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Could not create object "&1"; maximum number of objects &2 reached.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF004) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF004) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Could not create dictionary "&1"; maximum number of dictionaries &2 reached.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF005) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF005) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Could not add entry "&3" to dictionary #"&1"; entry already exists.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF006) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF006) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Could not add entry "&3" to dictionary #"&1"; maximum number of entries &2 reached.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF007) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF007) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Invalid &3 index "&1". (Must be between 1 and &2.)') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF008) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF008) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Invalid &3 index "&1", &3 is not in use.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+RMVMSGD MSGID(RPDF009) MSGF(&LIB/RPDFGMSGF)
+MONMSG CPF2419
+ADDMSGD MSGID(RPDF009) +
+        MSGF(&LIB/RPDFGMSGF) +
+        MSG('Could not add kid "&3" to object #"&1"; maximum number of entries &2 reached.') +
+        SEV(40) +
+        FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
+
+/* -------------------------------------------------------------------------- */
+CRTCMD CMD(&LIB/RPDFGCVT) +            
+       PGM(&LIB/RPDFGCVT) +
+       PRDLIB(&LIB) +            
+       SRCSTMF('QCMDSRC/RPDFGCVT.CMD')
+
+CRTSQLRPGI OBJ(&LIB/RPDFG) +
+           SRCSTMF('QRPGMOD/RPDFG.SQLRPGLE') +
+           COMMIT(*NONE) +
+           OBJTYPE(*MODULE) +
+           OUTPUT(*PRINT) +
+           OPTION(*XREF *SECLVL) +
+           RPGPPOPT(*LVL2) +
+           DBGVIEW(*LIST) +
+           COMPILEOPT('TGTCCSID(*JOB)')
+
+CRTSRVPGM SRVPGM(&LIB/RPDFG) +
+          SRCSTMF('QSRVSRC/RPDFG.BND') +
+          TEXT(*EXPORTSRC)
+
+CRTSQLRPGI OBJ(&LIB/RPDFGCVT) +
+           SRCSTMF('QRPGSRC/RPDFGCVT.SQLRPGLE') +
+           COMMIT(*NONE) +
+           OBJTYPE(*PGM) +
+           OUTPUT(*PRINT) +
+           OPTION(*XREF *SECLVL) +
+           RPGPPOPT(*LVL2) +
+           DBGVIEW(*LIST) +
+           COMPILEOPT('TGTCCSID(*JOB)')
+/* -------------------------------------------------------------------------- */
+GOTO CMDLBL(ENDPGM)
+/* -------------------------------------------------------------------------- */
+ERROR:  RCVMSG MSGTYPE(*EXCP) MSGDTA(&ERRMSGDTA) MSGID(&ERRMSGID) +
+            MSGF(&ERRMSGF) MSGFLIB(&ERRMSGFLIB)
+        SNDPGMMSG MSGID(&ERRMSGID) MSGF(&ERRMSGFLIB/&ERRMSGF) MSGDTA(&ERRMSGDTA) +
+            MSGTYPE(*ESCAPE)
+ENDPGM: ENDPGM

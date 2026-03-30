@@ -1,0 +1,220 @@
+**FREE
+// Prototypings and templates for the RPDFG service program
+
+Dcl-S  RPDFG_objIdx_T         INT(10) TEMPLATE;
+Dcl-S  RPDFG_dictIdx_T        INT(10) TEMPLATE;
+Dcl-S  RPDFG_32K_StringUTF8_T VARCHAR(32000) CCSID(*UTF8) TEMPLATE;
+
+Dcl-S  RPDFG_FontSize_T       PACKED(8:3) INZ(0);
+
+Dcl-DS RPDFG_SplfAtr_T QUALIFIED TEMPLATE;
+   OutqName        VARCHAR(10);
+   OutqLib         VARCHAR(10);
+   SplfName        VARCHAR(10);
+   SplfNbr         INT(10);
+   UserName        VARCHAR(10);
+   UserData        VARCHAR(10);
+   Job_Name        VARCHAR(28);
+   CreateTimestamp TIMESTAMP(0);
+   Total_Pages     INT(10);
+   FormType        VARCHAR(10);
+   Page_Length     INT(10);
+   Page_Width      INT(10);
+   Page_Rotation   VARCHAR(5);
+End-DS;
+
+Dcl-DS RPDFG_Margins_T QUALIFIED TEMPLATE;
+   NbrOfElems       INT(5);
+   // all margins in "points" (= 1/72 inch)
+   Left          PACKED(8:3);
+   Top           PACKED(8:3);
+   Right         PACKED(8:3);
+   Bottom        PACKED(8:3);
+End-DS;
+
+Dcl-DS RPDFG_obj_T QUALIFIED TEMPLATE;
+   inUse                  IND INZ(*OFF);
+   objNumberForPDF    INT(10) INZ(-1); // this is different from the index!
+   SpecialMode        CHAR(1) INZ(RPDFG_SPECIAL_OBJECT.NONE);
+   isArray            CHAR(1) INZ(*OFF);
+   Parent             LIKE(RPDFG_ref) INZ('');
+   Kids               LIKE(RPDFG_ref) INZ('') DIM(50);
+   NbrOfKids          INT(10) INZ(0);
+   dictIdx            INT(10) INZ(-1);
+   // PtrDict            POINTER INZ(*NULL);
+   // PtrStream          POINTER INZ(*NULL);
+   // Content       VARCHAR(1000);
+   // ContentSep    VARCHAR(1);
+End-DS;
+
+Dcl-DS RPDFG_dict_T QUALIFIED TEMPLATE;
+   inUse                  IND INZ(*OFF);
+   NbrOfDictEntries   INT(10) INZ(0);
+   DictKeys     VARCHAR(  16) DIM(32) INZ('');
+   DictValues   VARCHAR(1024) DIM(32) INZ('');
+   PtrDictInDict      POINTER INZ(*NULL);
+End-DS;
+
+Dcl-ENum RPDFG_SPECIAL_OBJECT QUALIFIED;
+   NONE        ' ';
+   CONTENTS    'C';
+   INTERNAL    'I';
+   TRAILER     'T';
+   XREF        'X';
+End-ENum;
+
+// -----------------------------------------------------------------------------
+// Set paper format
+// - paperFormat must be one of 
+//   [A3,A4,A5,
+//    US INVOICE,US EXECUTIVE,US LEGAL,US LETTER,US LEDGER]
+Dcl-PR RPDFG_initPaperFormat  EXTPROC(*DCLCASE);
+   paperFormat      VARCHAR(20)  CONST;
+   // Margins in "points" (= 1/72 inch)
+   MarginLeftPts    PACKED(8:3) CONST;
+   MarginTopPts     PACKED(8:3) CONST;
+   MarginRightPts   PACKED(8:3) CONST;
+   MarginBottomPts  PACKED(8:3) CONST;
+End-PR;
+
+Dcl-PR RPDFG_calculatePrintingValues EXTPROC(*DCLCASE);
+   Page_Rotation    LIKE(RPDFG_SplfAtr_T.Page_Rotation) CONST;
+   Page_Length      LIKE(RPDFG_SplfAtr_T.Page_Length)   CONST;
+   Page_Width       LIKE(RPDFG_SplfAtr_T.Page_Width)    CONST;
+End-PR;
+
+// get the font size
+Dcl-PR RPDFG_getFontSize LIKE(RPDFG_FontSize_T) EXTPROC(*DCLCASE);
+End-PR;
+
+// get the media box string, e.g. "[0 0 595 842]"
+Dcl-PR RPDFG_getMediaBoxString  VARCHAR(32) CCSID(*UTF8) EXTPROC(*DCLCASE);
+End-PR;
+
+// get the rotation of the page (0, 90, 180, 270)
+Dcl-PR RPDFG_getRotate INT(5) EXTPROC(*DCLCASE);
+End-PR;
+
+// create a new PDF object and return the index to it
+// -  specialMode 'X' for 'xref' object 
+Dcl-PR RPDFG_newObject     LIKE(RPDFG_objIdx_T) EXTPROC(*DCLCASE);
+   specialMode  CHAR(1) CONST OPTIONS(*NOPASS);
+End-PR;
+
+// create a new PDF dictionary and return the index to it
+Dcl-PR RPDFG_newDictionary LIKE(RPDFG_dictIdx_T) EXTPROC(*DCLCASE);
+End-PR;
+
+Dcl-PR RPDFG_rtvPtrObj     POINTER EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+Dcl-PR RPDFG_rtvPtrDict    POINTER EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// retrieve a reference to an object number for PDF output
+Dcl-PR RPDFG_ref           VARCHAR(32) EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// get the dictionary index of an object
+Dcl-PR RPDFG_getObjDictIdx LIKE(RPDFG_dictIdx_T) EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// get the number of kids of an object
+Dcl-PR RPDFG_getNumberOfKids INT(10) EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// get the total number of objects (for the trailer)
+Dcl-PR RPDFG_getTotalNumberOfObjects INT(10) EXTPROC(*DCLCASE);
+End-PR;
+
+// set the parent:kids relations in the Pages tree
+Dcl-PR RPDFG_setRelation   EXTPROC(*DCLCASE);
+   parent_objIdx  LIKE(RPDFG_objIdx_T) CONST;
+   kidobjIdx      LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// add an entry to a dictionary (and link the dictionary to the object)
+Dcl-PR RPDFG_addDictEntry  EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+   key          VARCHAR(  16) CONST;
+   value        VARCHAR(1024) CONST;
+End-PR;
+
+// Serialize an object as a string and write it in the IFS
+// Attention: after executing, the object index is no longer valid!
+Dcl-PR RPDFG_serializeObject  EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// Delete an object (mark it as not in use)
+Dcl-PR RPDFG_deleteObject  EXTPROC(*DCLCASE);
+   objIdx       LIKE(RPDFG_objIdx_T) CONST;
+End-PR;
+
+// Write yet unwritten objects to the IFS (before closing the file)
+Dcl-PR RPDFG_serializeUnwrittenObjects  EXTPROC(*DCLCASE);
+End-PR;
+
+// Serialize a dictionary and return the contents as an UTF-8 string
+Dcl-PR RPDFG_serializeDict LIKE(RPDFG_32K_StringUTF8_T) RTNPARM EXTPROC(*DCLCASE);
+   dictIdx      LIKE(RPDFG_dictIdx_T) CONST;
+End-PR;
+
+// Calculate the position of the line
+Dcl-PR RPDFG_calcLinePos   EXTPROC(*DCLCASE);
+   // line number of the SCS spooled file
+   lineNbr      INT(10)   CONST;
+   // character position (normally 1)
+   charPos      INT(10)   CONST;
+   // returned position in points (1/72 inch) from the left edge of the page
+   posX         PACKED(8:3);
+   // returned position in points (1/72 inch) from the bottom edge of the page
+   posY         PACKED(8:3);
+End-PR;
+
+// start the stream of a page object
+Dcl-PR RPDFG_startStream   EXTPROC(*DCLCASE);
+End-PR;
+
+// add something to the stream of a page object
+Dcl-PR RPDFG_addToStream   EXTPROC(*DCLCASE);
+   string       VARCHAR(1024)      CONST OPTIONS(*TRIM) CCSID(*UTF8);
+End-PR;
+
+// end the stream of a page object
+Dcl-PR RPDFG_endStream     EXTPROC(*DCLCASE);
+End-PR;
+
+// add a text block to the stream of a page object
+Dcl-PR RPDFG_addToStreamTextBlock   EXTPROC(*DCLCASE);
+   // line number   (1 - 255)
+   lineNumber       INT(10)        CONST;
+   // column number (1 - 378)
+   column           INT(10)        CONST;
+   // line to write
+   string       VARCHAR(378)       CONST;
+End-PR;
+
+
+
+// Open the IFS file for output
+Dcl-PR RPDFG_openPdfFile   EXTPROC(*DCLCASE);
+   IFSPath       VARCHAR(128) CONST OPTIONS(*TRIM);
+   IFSFileName   VARCHAR(128) CONST OPTIONS(*TRIM);
+   SplfAtr        LIKEDS(RPDFG_SplfAtr_T) CONST;
+End-PR;
+
+// write something to the IFS
+Dcl-PR RPDFG_writeBuffer   EXTPROC(*DCLCASE);
+   Ptr_Buffer    POINTER      CONST;
+   Buffer_Len    INT(10)      CONST;
+End-PR;
+
+// Close the IFS file
+Dcl-PR RPDFG_closePdfFile  EXTPROC(*DCLCASE);
+End-PR;
