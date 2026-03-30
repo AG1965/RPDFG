@@ -29,6 +29,9 @@
              PARM      KWD(MARGINS) TYPE(MARGINS)  +
                           PROMPT(CMD0010) 
 
+             PARM      KWD(TIMEZONE) TYPE(TIMEZONE) SNGVAL(*UTC) +
+                          PROMPT(CMD0015) PMTCTL(*PMTRQS)
+
  QUALJOB:    QUAL       TYPE(*NAME) LEN(10)
              QUAL       TYPE(*NAME) LEN(10) PROMPT(CMD0007)
              QUAL       TYPE(*CHAR) LEN(6) RANGE(000001 999999) +
@@ -38,3 +41,12 @@
              ELEM       TYPE(*DEC) LEN(8 3) PROMPT(CMD0012) DFT(14.173)
              ELEM       TYPE(*DEC) LEN(8 3) PROMPT(CMD0013) DFT(14.173)
              ELEM       TYPE(*DEC) LEN(8 3) PROMPT(CMD0014) DFT(14.173)
+
+ TIMEZONE:   ELEM       TYPE(*CHAR) LEN(5)   PROMPT(CMD0016) DFT(+0100)
+             ELEM       TYPE(*CHAR) LEN(5)   PROMPT(CMD0017) DFT(+0200)
+             ELEM       TYPE(*DEC)  LEN(2 0) PROMPT(CMD0018) DFT(03) RANGE(01 12)
+             ELEM       TYPE(*CHAR) LEN(1)   RSTD(*YES) DFT(*LAST) SPCVAL((*LAST L)) +
+                        VALUES(1 2 3 4 5 L) PROMPT(CMD0019)
+             ELEM       TYPE(*DEC) LEN(2 0) PROMPT(CMD0020) DFT(10) RANGE(01 12)
+             ELEM       TYPE(*CHAR) LEN(1)   RSTD(*YES) DFT(*LAST) SPCVAL((*LAST L)) +
+                        VALUES(1 2 3 4 5 L) PROMPT(CMD0021)

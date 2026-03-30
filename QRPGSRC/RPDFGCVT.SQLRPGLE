@@ -14,6 +14,7 @@ Dcl-PR MAIN EXTPGM('RPDFGCVT');
    PDF_File     VARCHAR(128) CONST;
    PaperFormat  VARCHAR( 20) CONST;
    Margins       LIKEDS(RPDFG_Margins_T) CONST;
+   TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
 End-PR;
 
 // max. number of "Pages" objects in the "Pages" tree
@@ -109,7 +110,8 @@ Dcl-Proc MAIN;
       p_PDF_Path     VARCHAR(128) CONST;
       p_PDF_File     VARCHAR(128) CONST;
       p_PaperFormat  VARCHAR( 20) CONST;
-      p_Margins       LIKEDS(RPDFG_Margins_T) CONST;
+      p_Margins       LIKEDS(RPDFG_Margins_T)  CONST;
+      p_TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
    End-PI;
 
    Dcl-DS h_QualJob QUALIFIED;
@@ -497,9 +499,16 @@ Dcl-Proc MAIN;
 
       // we do not need to write empty lines
       IF %TRIMR(SplDta.LINE) <> '';
-         RPDFG_addToStreamTextBlock(h_LineNumber:
-                                    1:
-                                    SplDta.LINE);
+         RPDFG_addToStreamTextBlock1252(h_LineNumber:
+                                        1:
+                                        SplDta.LINE);
+         // RPDFG_addToStreamTextBlock(h_LineNumber:
+         //                            1:
+         //                            SplDta.LINE);
+         // no idea why this won't work
+         // RPDFG_addToStreamTextBlockUcs2(h_LineNumber:
+         //                                1:
+         //                                SplDta.LINE);
       ENDIF;
 
 
@@ -517,7 +526,9 @@ Dcl-Proc MAIN;
    RPDFG_addDictEntry(i_Info:
                       'Author':'(' + SplfAtr(1).UserName + ')');
    RPDFG_addDictEntry(i_Info:
-                      'CreationDate':'(D:' + %CHAR(SplfAtr(1).CreateTimestamp:*ISO0) + ')');
+                      'CreationDate':'(D:' + %CHAR(SplfAtr(1).CreateTimestamp:*ISO0) + 
+                      '+00''00''' +
+                      ')');
    RPDFG_addDictEntry(i_Info:'Creator':
                       '(RPDFGCVT https://ag1965.github.com/RPDFG)');
    RPDFG_addDictEntry(i_Info:'Producer':

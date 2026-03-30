@@ -43,6 +43,15 @@ Dcl-DS CCSID_JOBRUN CONST QUALIFIED;
    BRACKET_CLOSE  CHAR(1) INZ(')') CCSID(*JOBRUN);
 End-DS;
 
+Dcl-DS CCSID_UCS2 CONST QUALIFIED;
+   SLASH          UCS2(1) INZ('/');
+   COLON          UCS2(1) INZ(':');
+   UNDERLINE      UCS2(1) INZ('_');
+   BACKSLASH      UCS2(1) INZ('\');
+   BRACKET_OPEN   UCS2(1) INZ('(');
+   BRACKET_CLOSE  UCS2(1) INZ(')');
+End-DS;
+
 Dcl-DS CCSID_HEX    CONST QUALIFIED;
    EOL            CHAR(2) INZ(x'0D0A')           CCSID(*HEX);
    HEADER_LINE2   CHAR(7) INZ(x'25FFFFFFFF0D0A') CCSID(*HEX);
@@ -937,7 +946,7 @@ Dcl-Proc RPDFG_endStream  EXPORT;
 End-Proc;
 
 // -----------------------------------------------------------------------------
-// add a Textblock to the stream of a page object
+// add a Textblock to the stream of a page object (UTF8)
 // -----------------------------------------------------------------------------
 Dcl-Proc RPDFG_addToStreamTextBlock  EXPORT;
    Dcl-Pi *n;
@@ -990,6 +999,132 @@ Dcl-Proc RPDFG_addToStreamTextBlock  EXPORT;
    // "(text) Tj"
    h_string = '(' + h_line2WriteUTF8 + ') ' + PDF.TEXT_DRAW;
    RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/ET"
+   h_string = PDF.TEXTBLOCK_END;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+End-Proc;
+
+// -----------------------------------------------------------------------------
+// add a Textblock to the stream of a page object 
+// -----------------------------------------------------------------------------
+Dcl-Proc RPDFG_addToStreamTextBlock1252  EXPORT;
+   Dcl-Pi *n;
+      // line number   (1 - 255)
+      p_lineNumber       INT(10)        CONST;
+      // column number (1 - 378)
+      p_column           INT(10)        CONST;
+      // line to write
+      p_line2Write   VARCHAR(378)       CONST;
+   End-PI;
+
+   Dcl-S  h_line2Write      VARCHAR(1024);
+   Dcl-S  h_line2Write1252  VARCHAR(1024) CCSID(1252);
+   Dcl-S  h_string          VARCHAR(1024) CCSID(1252);
+
+   Dcl-S  h_PosX       PACKED(8:3);
+   Dcl-S  h_PosY       PACKED(8:3);
+   Dcl-S  h_FontNumber    INT(10) INZ(1);
+   Dcl-S  h_FontSize   LIKE(g_PDF.FontSize);
+
+   IF %LEN(g_PDF.PageStream) = 0;
+      RPDFG_startStream();
+   ENDIF;
+
+   RPDFG_calcLinePos(p_LineNumber:p_column:h_PosX:h_PosY);
+
+   h_FontSize = g_PDF.FontSize;
+
+   // Escape special characters in the string
+   h_line2Write = %TRIMR(p_line2Write);
+   h_line2Write = %SCANRPL(CCSID_JOBRUN.BACKSLASH    :
+                       CCSID_JOBRUN.BACKSLASH + CCSID_JOBRUN.BACKSLASH    :h_line2Write);
+   h_line2Write = %SCANRPL(CCSID_JOBRUN.BRACKET_OPEN :
+                       CCSID_JOBRUN.BACKSLASH + CCSID_JOBRUN.BRACKET_OPEN :h_line2Write);
+   h_line2Write = %SCANRPL(CCSID_JOBRUN.BRACKET_CLOSE:
+                       CCSID_JOBRUN.BACKSLASH + CCSID_JOBRUN.BRACKET_CLOSE:h_line2Write);
+
+   h_line2Write1252 = h_line2Write;
+
+   // "/BT"
+   h_string = PDF.TEXTBLOCK_BEGIN;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/F1 10.0 Tf"
+   h_string = '/' + PDF.FONT_SELECT_NUMBER + %CHAR(h_FontNumber) + ' ' +
+                                             %CHAR(h_FontSize) + ' ' + PDF.TEXT_FONT_RESSOURCE;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "1 0 0 1 100.00 700.00 Tm"
+   h_string = PDF.MATRIX_SCALE_1_1 + %CHAR(h_PosX) + ' ' + %CHAR(h_PosY) + ' ' + PDF.TEXT_MATRIX;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "(text) Tj"
+   h_string = '(' + h_line2Write1252 + ') ' + PDF.TEXT_DRAW;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/ET"
+   h_string = PDF.TEXTBLOCK_END;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+End-Proc;
+
+// -----------------------------------------------------------------------------
+// add a UCS2 Textblock to the stream of a page object
+// -----------------------------------------------------------------------------
+Dcl-Proc RPDFG_addToStreamTextBlockUcs2  EXPORT;
+   Dcl-Pi *n;
+      // line number   (1 - 255)
+      p_lineNumber       INT(10)    CONST;
+      // column number (1 - 378)
+      p_column           INT(10)    CONST;
+      // line to write
+      p_line2Write   VARUCS2(378)   CONST;
+   End-PI;
+
+   Dcl-S  h_line2Write      VARUCS2(1024);
+   // Dcl-S  h_line2WriteUTF8  VARCHAR(1024) CCSID(*UTF8);
+   Dcl-S  h_string          VARCHAR(1024) CCSID(*UTF8);
+
+   Dcl-S  h_PosX       PACKED(8:3);
+   Dcl-S  h_PosY       PACKED(8:3);
+   Dcl-S  h_FontNumber    INT(10) INZ(1);
+   Dcl-S  h_FontSize   LIKE(g_PDF.FontSize);
+
+   Dcl-S  PDF_BOM_UTF16BE  CHAR(2) INZ(X'FEFF') CCSID(*HEX);
+
+   IF %LEN(g_PDF.PageStream) = 0;
+      RPDFG_startStream();
+   ENDIF;
+
+   RPDFG_calcLinePos(p_LineNumber:p_column:h_PosX:h_PosY);
+
+   h_FontSize = g_PDF.FontSize;
+
+   // Escape special characters in the string
+   h_line2Write = %TRIMR(p_line2Write);
+   h_line2Write = %SCANRPL(CCSID_UCS2.BACKSLASH    :
+                       CCSID_UCS2.BACKSLASH + CCSID_UCS2.BACKSLASH    :h_line2Write);
+   h_line2Write = %SCANRPL(CCSID_UCS2.BRACKET_OPEN :
+                       CCSID_UCS2.BACKSLASH + CCSID_UCS2.BRACKET_OPEN :h_line2Write);
+   h_line2Write = %SCANRPL(CCSID_UCS2.BRACKET_CLOSE:
+                       CCSID_UCS2.BACKSLASH + CCSID_UCS2.BRACKET_CLOSE:h_line2Write);
+
+   // "/BT"
+   h_string = PDF.TEXTBLOCK_BEGIN;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/F1 10.0 Tf"
+   h_string = '/' + PDF.FONT_SELECT_NUMBER + %CHAR(h_FontNumber) + ' ' +
+                                             %CHAR(h_FontSize) + ' ' + PDF.TEXT_FONT_RESSOURCE;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "1 0 0 1 100.00 700.00 Tm"
+   h_string = PDF.MATRIX_SCALE_1_1 + %CHAR(h_PosX) + ' ' + %CHAR(h_PosY) + ' ' + PDF.TEXT_MATRIX;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   // "(FEFF + text) Tj"
+   h_string = '(';
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string));
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(PDF_BOM_UTF16BE):%LEN(PDF_BOM_UTF16BE));
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_line2Write:*DATA):%LEN(h_line2Write)*2);
+   h_string = ') ' + PDF.TEXT_DRAW;
+   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
    // "/ET"
    h_string = PDF.TEXTBLOCK_END;
    RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);

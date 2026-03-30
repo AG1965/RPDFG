@@ -177,7 +177,55 @@ The standard margins are 14.173 points (1 point = 1/72 inch), which is approxima
 :PT.:PV.0.0-99999.999:EPV.
 :PD.Specify the offset of the origin from the bottom border of the page.
 :EPARML.
-
+:EHELP.
+.*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/TIMEZONE'.Time zone
+:P.:XH3.Time zone (TIMEZONE)
+:P.RPDFGCVT can insert the creation date and time in the file name and includes it in the "Info" object
+in the PDF file. 
+:P.But there is no time zone information in the spooled file. PDF epects a UTC offset in the timestamp. So this parameter is used to 
+specify the time zone of the spooled file creation time by telling the program when summer time begins and ends.
+:P.
+:HP2.Element 3: Month summertime starts:EHP2.
+:PARML.
+:PT.:PV.01-12:EPV.
+:PD.Specify the month summertime starts; normally this is March, so the default is "03".
+:EPARML.
+:HP2.Element 4: Sunday summertime starts:EHP2.
+:PARML.
+:PT.:PV.1:EPV.
+:PD.Summertime starts on the first sunday in the given month.
+:PT.:PV.2:EPV.
+:PD.Summertime starts on the second sunday in the given month.
+:PT.:PV.3:EPV.
+:PD.Summertime starts on the third sunday in the given month.
+:PT.:PV.4:EPV.
+:PD.Summertime starts on the fourth sunday in the given month.
+:PT.:PV.5:EPV.
+:PD.Summertime starts on the fifth sunday in the given month.
+:PT.:PV.L or *LAST:EPV.
+:PD.Summertime starts on the last sunday in the given month.
+:EPARML.
+:HP2.Element 5: Month summertime ends:EHP2.
+:PARML.
+:PT.:PV.01-12:EPV.
+:PD.Specify the month summertime ends; the default is "10".
+:EPARML.
+:HP2.Element 6: Sunday summertime ends:EHP2.
+:PARML.
+:PT.:PV.1:EPV.
+:PD.Summertime ends on the first sunday in the given month.
+:PT.:PV.2:EPV.
+:PD.Summertime ends on the second sunday in the given month.
+:PT.:PV.3:EPV.
+:PD.Summertime ends on the third sunday in the given month.
+:PT.:PV.4:EPV.
+:PD.Summertime ends on the fourth sunday in the given month.
+:PT.:PV.5:EPV.
+:PD.Summertime ends on the fifth sunday in the given month.
+:PT.:PV.L or *LAST:EPV.
+:PD.Summertime ends on the last sunday in the given month.
+:EPARML.
 :EHELP.
 .*---------------------------------------------------------------------
 :EPNLGRP.

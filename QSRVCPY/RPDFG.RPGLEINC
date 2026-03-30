@@ -32,6 +32,15 @@ Dcl-DS RPDFG_Margins_T QUALIFIED TEMPLATE;
    Bottom        PACKED(8:3);
 End-DS;
 
+Dcl-DS RPDFG_TimeZone_T QUALIFIED TEMPLATE;
+   TimeZoneNormal     CHAR(5);
+   TimeZoneSummer     CHAR(5);
+   SummerStartMonth   PACKED(2:0);
+   SummerStartSunday  CHAR(1);
+   SummerEndMonth     PACKED(2:0);
+   SummerEndSunday    CHAR(1);
+End-DS;
+
 Dcl-DS RPDFG_obj_T QUALIFIED TEMPLATE;
    inUse                  IND INZ(*OFF);
    objNumberForPDF    INT(10) INZ(-1); // this is different from the index!
@@ -198,6 +207,26 @@ Dcl-PR RPDFG_addToStreamTextBlock   EXTPROC(*DCLCASE);
    column           INT(10)        CONST;
    // line to write
    string       VARCHAR(378)       CONST;
+End-PR;
+
+// add a text block to the stream of a page object
+Dcl-PR RPDFG_addToStreamTextBlock1252   EXTPROC(*DCLCASE);
+   // line number   (1 - 255)
+   lineNumber       INT(10)        CONST;
+   // column number (1 - 378)
+   column           INT(10)        CONST;
+   // line to write
+   string       VARCHAR(378)       CONST;
+End-PR;
+
+// add a UCS2 text block to the stream of a page object
+Dcl-PR RPDFG_addToStreamTextBlockUcs2   EXTPROC(*DCLCASE);
+   // line number   (1 - 255)
+   lineNumber       INT(10)        CONST;
+   // column number (1 - 378)
+   column           INT(10)        CONST;
+   // line to write
+   string       VARUCS2(378)       CONST;
 End-PR;
 
 
