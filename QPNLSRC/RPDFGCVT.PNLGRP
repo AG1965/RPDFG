@@ -146,5 +146,39 @@ file attributes into the file name.
 :EDL.
 :EHELP.
 .*---------------------------------------------------------------------
+:HELP   NAME='RPDFGCVT/MARGINS'.Margins
+:P.:XH3.Margins (MARGINS)
+:P.Specifies the margins in 1/72 inch = "Points".
+These margins are independent from those specified in the spooled file. 
+The margins specified in the spooled file are ignored.
+:P.
+The standard margins are 14.173 points (1 point = 1/72 inch), which is approximately 5 mm.
+:P.
+:HP2.Element 1: Left margin:EHP2.
+:PARML.
+:PT.:PV.0.0-99999.999:EPV.
+:PD.Specify the offset of the origin from the left side of the page.
+:EPARML.
+:P.
+:HP2.Element 2: Top margin:EHP2.
+:PARML.
+:PT.:PV.0.0-99999.999:EPV.
+:PD.Specify the margin from the top border of the page.
+:EPARML.
+:P.
+:HP2.Element 3: Right margin:EHP2.
+:PARML.
+:PT.:PV.0.0-99999.999:EPV.
+:PD.Specify the margin from the right border of the page.
+:EPARML.
+:P.
+:HP2.Element 4: Bottom margin:EHP2.
+:PARML.
+:PT.:PV.0.0-99999.999:EPV.
+:PD.Specify the offset of the origin from the bottom border of the page.
+:EPARML.
+
+:EHELP.
+.*---------------------------------------------------------------------
 :EPNLGRP.
 .*---------------------------------------------------------------------
