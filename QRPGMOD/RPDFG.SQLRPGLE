@@ -796,16 +796,16 @@ Dcl-Proc RPDFG_calculatePrintingValues  EXPORT;
 
 
    SELECT;
-      WHEN h_Page_Rotation = PAGRTT.PORTRAIT;
+      WHEN h_PageRotation = PAGRTT.PORTRAIT;
          h_Orientation = ORIENTATION.P;
          g_PDF.Rotate = 0;
-      WHEN h_Page_Rotation = PAGRTT.PORTRAIT_REVERSE;
+      WHEN h_PageRotation = PAGRTT.PORTRAIT_REVERSE;
          h_Orientation = ORIENTATION.P;
          g_PDF.Rotate = 180;
-      WHEN h_Page_Rotation = PAGRTT.LANDSCAPE;
+      WHEN h_PageRotation = PAGRTT.LANDSCAPE;
          h_Orientation = ORIENTATION.L;
          g_PDF.Rotate = 90;
-      WHEN h_Page_Rotation = PAGRTT.LANDSCAPE_REVERSE;
+      WHEN h_PageRotation = PAGRTT.LANDSCAPE_REVERSE;
          h_Orientation = ORIENTATION.L;
          g_PDF.Rotate = 270;
       OTHER;
@@ -953,6 +953,8 @@ Dcl-Proc RPDFG_endStream  EXPORT;
    RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_buffer:*DATA):%LEN(h_buffer));
 
    RPDFG_writeBuffer(%ADDR(g_PDF.PageStream:*DATA):%LEN(g_PDF.PageStream));
+
+   %LEN(g_PDF.PageStream) = 0;
 
 End-Proc;
 
@@ -1362,7 +1364,7 @@ End-Proc;
 
 
 // -----------------------------------------------------------------------------
-// add something to a buffer in a safe mode to prevent translations
+// add something 1:1 to a buffer in a safe mode to prevent translations
 // be sure to specify VARCHAR(n:4) if n is < 65535!
 // -----------------------------------------------------------------------------
 Dcl-Proc RPDFG_add EXPORT;
@@ -1397,9 +1399,29 @@ Dcl-Proc RPDFG_add EXPORT;
    RETURN;
 
 End-Proc;
+// -----------------------------------------------------------------------------
 
 
 // -----------------------------------------------------------------------------
+// create greenbar stream
+// -----------------------------------------------------------------------------
+Dcl-Proc RPDFG_createGreenbar EXPORT;
+   Dcl-Pi *n;
+      p_PtrToBuffer    POINTER      CONST;
+      p_PtrFromBuffer  POINTER      CONST;
+      p_Len            INT(10)      CONST;
+      p_add_Special    VARCHAR(10)  CONST OPTIONS(*NOPASS);
+   End-PI;
+
+   Dcl-DS h_ToBuffer  QUALIFIED BASED(p_PtrToBuffer);
+      BufferLength      INT(10);
+      BufferValue       CHAR(100000) CCSID(*HEX);
+   End-DS;
+   Dcl-S  h_FromBuffer  CHAR(100000) BASED(p_PtrFromBuffer) CCSID(*HEX);
+End-Proc;
+// -----------------------------------------------------------------------------
+
+
 
 // -----------------------------------------------------------------------------
 DCL-PROC SQL_Diagnostics ;

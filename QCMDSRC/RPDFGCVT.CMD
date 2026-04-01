@@ -36,6 +36,11 @@
              PARM      KWD(TIMEZONE) TYPE(TIMEZONE) SNGVAL(*UTC) +
                           PROMPT(CMD0015) PMTCTL(*PMTRQS)
 
+             PARM      KWD(OPTIONS) TYPE(*CHAR) LEN(10) SNGVAL(*NONE) MAX(10) +
+                          DFT(*NONE) RSTD(*YES) +
+                          SPCVAL((*NONE) (*GREENBAR) (*NUMBERS)) +
+                          PROMPT(CMD0023) PMTCTL(*PMTRQS)
+
  QUALJOB:    QUAL       TYPE(*NAME) LEN(10)
              QUAL       TYPE(*NAME) LEN(10) PROMPT(CMD0007)
              QUAL       TYPE(*CHAR) LEN(6) RANGE(000001 999999) +

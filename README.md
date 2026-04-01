@@ -57,3 +57,11 @@ documentation:
 - [apryse.com/blog](https://apryse.com/blog/pdf-structure-creation)
 
 One can also use ChatGPT to check pdf files.
+
+## To Do
+
+- [ ] Make the file acceptable for more viewers than Google Chrome and VS Code.
+- [ ] Fix errors in the page tree when the spooled file has more than 1 - 5 pages
+- [ ] implement different time zones
+- [ ] Umlauts (ä,ö,ü,Ä,Ö,Ü,ß) look bold - and due to that weird. (Might be another font than Courier.)
+- [ ] Add support for simple overlays

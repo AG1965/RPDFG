@@ -41,6 +41,11 @@ Dcl-DS RPDFG_TimeZone_T QUALIFIED TEMPLATE;
    SummerEndSunday    CHAR(1);
 End-DS;
 
+Dcl-DS RPDFG_Options_T QUALIFIED TEMPLATE;
+   NbrOfElems       INT(5);
+   value           CHAR(10) DIM(10);
+End-DS;
+
 Dcl-DS RPDFG_obj_T QUALIFIED TEMPLATE;
    inUse                  IND INZ(*OFF);
    objNumberForPDF    INT(10) INZ(-1); // this is different from the index!

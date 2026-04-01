@@ -14,8 +14,9 @@ Dcl-PR MAIN EXTPGM('RPDFGCVT');
    PDF_File     VARCHAR(128) CONST;
    PaperFormat  VARCHAR( 20) CONST;
    PageRotation    CHAR( 10) CONST;
-   Margins       LIKEDS(RPDFG_Margins_T) CONST;
+   Margins       LIKEDS(RPDFG_Margins_T)  CONST;
    TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
+   Options       LIKEDS(RPDFG_Options_T)  CONST;
 End-PR;
 
 // max. number of "Pages" objects in the "Pages" tree
@@ -57,6 +58,11 @@ Dcl-ENum PAGRTT QUALIFIED;
    LANDSCAPE_REVERSE '270';
 End-ENum;
 
+Dcl-ENum OPTIONS QUALIFIED;
+   NONE              '*NONE';
+   GREENBAR          '*GREENBAR';
+   NUMBERS           '*NUMBERS';
+End-ENum;
 
 Dcl-PR QCMDEXC EXTPGM('QCMDEXC');
    CmdString     CHAR(32702) CONST OPTIONS(*VARSIZE);
@@ -114,6 +120,7 @@ Dcl-Proc MAIN;
       p_PageRotation    CHAR( 10) CONST;
       p_Margins       LIKEDS(RPDFG_Margins_T)  CONST;
       p_TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
+      p_Options       LIKEDS(RPDFG_Options_T)  CONST;
    End-PI;
 
    Dcl-DS h_QualJob QUALIFIED;
@@ -137,7 +144,7 @@ Dcl-Proc MAIN;
 
    // various object indices
    Dcl-S  i_Root           INT(10);
-   Dcl-S  i_F1             INT(10);
+   Dcl-S  i_Fn             INT(10);
    Dcl-S  i_Font           INT(10);
    Dcl-S  h_Font           INT(10);
    Dcl-S  i_PagesRoot      INT(10);
@@ -149,7 +156,8 @@ Dcl-Proc MAIN;
    Dcl-S  i_Trailer        INT(10);
 
    Dcl-S  pdfObjRef_Root   LIKE(RPDFG_ref);
-   Dcl-S  pdfObjRef_Font   LIKE(RPDFG_ref);
+   Dcl-S  pdfObjRef_Font1  LIKE(RPDFG_ref);
+   Dcl-S  pdfObjRef_Font2  LIKE(RPDFG_ref);
    Dcl-S  pdfObjRef_Info   LIKE(RPDFG_ref);
 
    Dcl-S  h_startxref      INT(10) INZ(0);
@@ -164,8 +172,10 @@ Dcl-Proc MAIN;
    // how many Page-objects fit into all Pages objects
    Dcl-S  h_DepthMaxPages  INT(10);
 
-   Dcl-S  h_Resources_string  VARCHAR(1000) CCSID(*UTF8);
+   Dcl-S  h_Resources_string1 VARCHAR(1000) CCSID(*UTF8);
+   Dcl-S  h_Resources_string2 VARCHAR(1000) CCSID(*UTF8);
    Dcl-S  h_MediaBox_string   LIKE(RPDFG_getMediaBoxString);
+   Dcl-S  h_streamOptions     VARCHAR(4000) CCSID(*UTF8);
 
    Dcl-DS SplfAtr LIKEDS(RPDFG_SplfAtr_T) DIM(*AUTO:2);
 
@@ -355,12 +365,12 @@ Dcl-Proc MAIN;
 
    // root object
    i_Root    = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Root:'Type':'Catalog');
+   RPDFG_addDictEntry(i_Root:'Type':'/Catalog');
    pdfObjRef_Root = RPDFG_ref(i_Root);
 
    // Pages object
    i_Pages   = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Pages:'Type':'Pages');
+   RPDFG_addDictEntry(i_Pages:'Type':'/Pages');
    // put this in the tree
    h_PageDepth(1).count  = 1;
    h_PageDepth(1).objIdx = i_Pages;
@@ -370,29 +380,65 @@ Dcl-Proc MAIN;
    // "Root" is now ready and can be written; Object Index will be re-used for antoher object
    RPDFG_serializeObject(i_Root);
 
-   // Font object
+   // Font object 1 - Courier, used for the whole document
    i_Font    = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Font:'Type'    :'Font');
+   RPDFG_addDictEntry(i_Font:'Type'    :'/Font');
    RPDFG_addDictEntry(i_Font:'Subtype' :'/Type1');
    RPDFG_addDictEntry(i_Font:'BaseFont':'/Courier');
+   RPDFG_addDictEntry(i_Font:'Encoding':'/WinAnsiEncoding');
    // remember the reference to the font object in the PDF file
-   pdfObjRef_Font = RPDFG_ref(i_Font);
+   pdfObjRef_Font1 = RPDFG_ref(i_Font);
    // Font is ready
    RPDFG_serializeObject(i_Font);
 
+   IF OPTIONS.NONE IN p_Options.value;
+      // no optional extras
+   ELSE;
+      // Font object 2 - used for the line numbers when option *NUMBERS is specified
+      i_Font    = RPDFG_newObject();
+      RPDFG_addDictEntry(i_Font:'Type'    :'/Font');
+      RPDFG_addDictEntry(i_Font:'Subtype' :'/Type1');
+      RPDFG_addDictEntry(i_Font:'BaseFont':'/Helvetica');
+      // remember the reference to the font object in the PDF file
+      pdfObjRef_Font2 = RPDFG_ref(i_Font);
+      // Font is ready
+      RPDFG_serializeObject(i_Font);
+   ENDIF;
    // -------------------------------------------------------
    // create reusable h_Resources_string for the Page object
    // -------------------------------------------------------
    // Page - Font - F1 dictionary
-   i_F1 = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
-   RPDFG_addDictEntry(i_F1:'F1':pdfObjRef_Font);
+   i_Fn = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
+   RPDFG_addDictEntry(i_Fn:'F1':pdfObjRef_Font1);
    // Page - Font dictionary
    h_Font = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
-   RPDFG_addDictEntry(h_Font:'Font':RPDFG_serializeDict(RPDFG_getObjDictIdx(i_F1)));
-   h_Resources_string = RPDFG_serializeDict(RPDFG_getObjDictIdx(h_Font));
-   // The dictionaries of F1 and h_Font are now gone, so the objects have to be deleted, too!!!
-   RPDFG_deleteObject(i_F1);
+   RPDFG_addDictEntry(h_Font:'Font':RPDFG_serializeDict(RPDFG_getObjDictIdx(i_Fn)));
+   h_Resources_string1 = RPDFG_serializeDict(RPDFG_getObjDictIdx(h_Font));
+   // The dictionaries of Fn and h_Font are now gone, so the objects have to be deleted, too!!!
+   RPDFG_deleteObject(i_Fn);
    RPDFG_deleteObject(h_Font);
+   
+   %LEN(h_streamOptions) = 0;
+   IF OPTIONS.NONE IN p_Options.value;
+      // no optional extras
+   ELSE;
+      // Page - Font - F2 dictionary
+      i_Fn = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
+      RPDFG_addDictEntry(i_Fn:'F2':pdfObjRef_Font2);
+      // Page - Font dictionary
+      h_Font = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
+      RPDFG_addDictEntry(h_Font:'Font':RPDFG_serializeDict(RPDFG_getObjDictIdx(i_Fn)));
+      h_Resources_string2 = RPDFG_serializeDict(RPDFG_getObjDictIdx(h_Font));
+      // The dictionaries of Fn and h_Font are now gone, so the objects have to be deleted, too!!!
+      RPDFG_deleteObject(i_Fn);
+      RPDFG_deleteObject(h_Font);
+      // --------------------------------------------------------------------------
+      %LEN(h_streamOptions) = 0;
+      IF OPTIONS.GREENBAR IN p_Options.value;
+         RPDFG_createGreenbar(%ADDR(h_streamOptions));
+      ENDIF;
+   ENDIF;
+   // --------------------------------------------------------------------------
    // -------------------------------------------------------
    // This one is needed for every page, so we create it once and reuse the string
    h_MediaBox_string = RPDFG_getMediaBoxString();
@@ -402,7 +448,7 @@ Dcl-Proc MAIN;
       IF h_PageDepth(#d).count < 1;
          h_PageDepth(#d).count += 1;
          h_PageDepth(#d).objIdx = RPDFG_newObject();
-         RPDFG_addDictEntry(h_PageDepth(#d).objIdx:'Type':'Pages');
+         RPDFG_addDictEntry(h_PageDepth(#d).objIdx:'Type':'/Pages');
          // connect the new "Pages" object to it's parent in the tree
          RPDFG_addDictEntry(h_PageDepth(#d).objIdx:'Parent' :RPDFG_ref(h_PageDepth(#d-1).objIdx));
       ENDIF;
@@ -458,7 +504,7 @@ Dcl-Proc MAIN;
 
          // create Page object
          i_Page = RPDFG_newObject();
-         RPDFG_addDictEntry(i_Page:'Type':'Page');
+         RPDFG_addDictEntry(i_Page:'Type':'/Page');
          // add the Page object ref to the current Pages object
          // RPDFG_addObjKidRef(i_Pages:i_Page);
          // RPDFG_g_obj(i_Pages).NbrOfKids += 1;
@@ -466,7 +512,7 @@ Dcl-Proc MAIN;
          // // the parent of the "Page" is the current "Pages" object
          // RPDFG_addDictEntry(i_Page:'Parent':RPDFG_ref(i_Pages));
          RPDFG_setRelation(i_Pages:i_Page);
-         RPDFG_addDictEntry(i_Page:'Resources':h_Resources_string);
+         RPDFG_addDictEntry(i_Page:'Resources':h_Resources_string1);
          RPDFG_addDictEntry(i_Page:'MediaBox':h_MediaBox_string);
          // RPDFG_addDictEntry(i_Page:'Rotate':%CHAR(RPDFG_getRotate()));
 
@@ -558,5 +604,18 @@ Dcl-Proc MAIN;
 
    // startxref + close PDF file
    RPDFG_closePdfFile();
+
+End-Proc;
+
+// =============================================================================
+Dcl-Proc RPDFG_createGreenbar;
+   Dcl-PI *N;
+      p_Ptr_OutString POINTER CONST;
+   End-PI;
+
+   Dcl-S  OutString  VARCHAR(4000) CCSID(*UTF8);
+
+   Dcl-S  i           INT(10) INZ(0);
+
 
 End-Proc;
