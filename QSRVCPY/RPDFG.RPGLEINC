@@ -196,9 +196,15 @@ End-PR;
 Dcl-PR RPDFG_startStream   EXTPROC(*DCLCASE);
 End-PR;
 
-// add something to the stream of a page object
-Dcl-PR RPDFG_addToStream   EXTPROC(*DCLCASE);
+// add UTF8 parameter value to the stream of a page object
+Dcl-PR RPDFG_addToStreamUTF8   EXTPROC(*DCLCASE);
    string       VARCHAR(1024)      CONST OPTIONS(*TRIM) CCSID(*UTF8);
+End-PR;
+
+// add hex value via pointer to the stream of a page object
+Dcl-PR RPDFG_addToStreamHex   EXTPROC(*DCLCASE);
+   Ptr_BufferToWrite       POINTER CONST;
+   Len_BufferToWrite       INT(10) CONST;
 End-PR;
 
 // end the stream of a page object
@@ -252,4 +258,15 @@ End-PR;
 
 // Close the IFS file
 Dcl-PR RPDFG_closePdfFile  EXTPROC(*DCLCASE);
+End-PR;
+
+
+// Jobinfo at the bottom
+Dcl-PR RPDFG_createPrePrintForm_JobInfo EXTPROC(*DCLCASE);
+   Ptr_Buffer    POINTER      CONST;
+End-PR;
+
+// Create small numbers on the left and on the right of the page (for debugging purposes)
+Dcl-PR RPDFG_createPrePrintForm_Numbers EXTPROC(*DCLCASE);
+   Ptr_Buffer    POINTER      CONST;
 End-PR;

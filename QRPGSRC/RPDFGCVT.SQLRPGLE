@@ -60,8 +60,9 @@ End-ENum;
 
 Dcl-ENum OPTIONS QUALIFIED;
    NONE              '*NONE';
-   GREENBAR          '*GREENBAR';
+   JOBINFO           '*JOBINFO';
    NUMBERS           '*NUMBERS';
+   GREENBAR          '*GREENBAR';
 End-ENum;
 
 Dcl-PR QCMDEXC EXTPGM('QCMDEXC');
@@ -175,7 +176,8 @@ Dcl-Proc MAIN;
    Dcl-S  h_Resources_string1 VARCHAR(1000) CCSID(*UTF8);
    Dcl-S  h_Resources_string2 VARCHAR(1000) CCSID(*UTF8);
    Dcl-S  h_MediaBox_string   LIKE(RPDFG_getMediaBoxString);
-   Dcl-S  h_streamOptions     VARCHAR(4000) CCSID(*UTF8);
+
+   Dcl-S  h_streamOptions     VARCHAR(8000:4) CCSID(*HEX);
 
    Dcl-DS SplfAtr LIKEDS(RPDFG_SplfAtr_T) DIM(*AUTO:2);
 
@@ -380,6 +382,10 @@ Dcl-Proc MAIN;
    // "Root" is now ready and can be written; Object Index will be re-used for antoher object
    RPDFG_serializeObject(i_Root);
 
+
+   // Page - Font - F1 dictionary
+   i_Fn = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
+
    // Font object 1 - Courier, used for the whole document
    i_Font    = RPDFG_newObject();
    RPDFG_addDictEntry(i_Font:'Type'    :'/Font');
@@ -390,7 +396,9 @@ Dcl-Proc MAIN;
    pdfObjRef_Font1 = RPDFG_ref(i_Font);
    // Font is ready
    RPDFG_serializeObject(i_Font);
+   RPDFG_addDictEntry(i_Fn:'F1':pdfObjRef_Font1);
 
+   // Extras need a second font
    IF OPTIONS.NONE IN p_Options.value;
       // no optional extras
    ELSE;
@@ -399,17 +407,16 @@ Dcl-Proc MAIN;
       RPDFG_addDictEntry(i_Font:'Type'    :'/Font');
       RPDFG_addDictEntry(i_Font:'Subtype' :'/Type1');
       RPDFG_addDictEntry(i_Font:'BaseFont':'/Helvetica');
+      RPDFG_addDictEntry(i_Font:'Encoding':'/WinAnsiEncoding');
       // remember the reference to the font object in the PDF file
       pdfObjRef_Font2 = RPDFG_ref(i_Font);
       // Font is ready
       RPDFG_serializeObject(i_Font);
+      RPDFG_addDictEntry(i_Fn:'F2':pdfObjRef_Font2);
    ENDIF;
    // -------------------------------------------------------
    // create reusable h_Resources_string for the Page object
    // -------------------------------------------------------
-   // Page - Font - F1 dictionary
-   i_Fn = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
-   RPDFG_addDictEntry(i_Fn:'F1':pdfObjRef_Font1);
    // Page - Font dictionary
    h_Font = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.INTERNAL);
    RPDFG_addDictEntry(h_Font:'Font':RPDFG_serializeDict(RPDFG_getObjDictIdx(i_Fn)));
@@ -434,8 +441,11 @@ Dcl-Proc MAIN;
       RPDFG_deleteObject(h_Font);
       // --------------------------------------------------------------------------
       %LEN(h_streamOptions) = 0;
-      IF OPTIONS.GREENBAR IN p_Options.value;
-         RPDFG_createGreenbar(%ADDR(h_streamOptions));
+      IF OPTIONS.JOBINFO IN p_Options.value;
+         RPDFG_createPrePrintForm_JobInfo(%ADDR(h_streamOptions));
+      ENDIF;
+      IF OPTIONS.NUMBERS IN p_Options.value;
+         RPDFG_createPrePrintForm_Numbers(%ADDR(h_streamOptions));
       ENDIF;
    ENDIF;
    // --------------------------------------------------------------------------
@@ -521,7 +531,10 @@ Dcl-Proc MAIN;
          i_Contents = RPDFG_newObject(RPDFG_SPECIAL_OBJECT.CONTENTS);
          RPDFG_addDictEntry(i_Page:'Contents':RPDFG_ref(i_Contents));
 
-         // RPDFG_startStream();
+         IF %LEN(h_streamOptions) > 0;
+            RPDFG_startStream();
+            RPDFG_addToStreamHex(%ADDR(h_streamOptions:*DATA):%LEN(h_streamOptions));
+         ENDIF;
 
       ENDIF; // new page
       // --------------------------------------------------
@@ -579,7 +592,7 @@ Dcl-Proc MAIN;
                       '+00''00''' +
                       ')');
    RPDFG_addDictEntry(i_Info:'Creator':
-                      '(RPDFGCVT https://ag1965.github.com/RPDFG)');
+                      '(RPDFGCVT https://github.com/AG1965/RPDFG)');
    RPDFG_addDictEntry(i_Info:'Producer':
                       '(RPDFG Compiled (D:' + PSDS.CompileUDate + PSDS.CompileTime + ') IBMi)');
    // /Title (No Title)
@@ -604,18 +617,5 @@ Dcl-Proc MAIN;
 
    // startxref + close PDF file
    RPDFG_closePdfFile();
-
-End-Proc;
-
-// =============================================================================
-Dcl-Proc RPDFG_createGreenbar;
-   Dcl-PI *N;
-      p_Ptr_OutString POINTER CONST;
-   End-PI;
-
-   Dcl-S  OutString  VARCHAR(4000) CCSID(*UTF8);
-
-   Dcl-S  i           INT(10) INZ(0);
-
 
 End-Proc;

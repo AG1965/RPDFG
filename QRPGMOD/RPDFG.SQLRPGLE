@@ -19,13 +19,17 @@ Dcl-DS  PDF QUALIFIED;
    ARRAY_END             CHAR( 1) INZ(']');
    DICTIONARY_STR        CHAR( 2) INZ('<<');
    DICTIONARY_END        CHAR( 3) INZ(' >>');
+   GRAPHICS_STATE_PUSH   CHAR( 2) INZ('q');
+   GRAPHICS_STATE_POP    CHAR( 2) INZ('Q');
    TEXTBLOCK_BEGIN       CHAR( 2) INZ('BT');
    TEXTBLOCK_END         CHAR( 2) INZ('ET');
    FONT_SELECT_NUMBER    CHAR( 1) INZ('F');
    TEXT_FONT_RESSOURCE   CHAR( 2) INZ('Tf');
    MATRIX_SCALE_1_1      CHAR( 8) INZ('1 0 0 1 ');
    TEXT_MATRIX           CHAR( 2) INZ('Tm');
+   TEXT_RELATIVE_POS     CHAR( 2) INZ('Td');
    TEXT_DRAW             CHAR( 2) INZ('Tj');
+   NON_STROKE_COLOR      CHAR( 2) INZ('rg');
    XREF                  CHAR( 4) INZ('xref');
    TRAILER               CHAR( 7) INZ('trailer');
    STARTXREF             CHAR( 9) INZ('startxref');
@@ -131,6 +135,8 @@ Dcl-DS g_PDF QUALIFIED;
    LPI          PACKED(8:3) INZ(0);
    CPI          PACKED(8:3) INZ(0);
    FontSize     PACKED(8:3) INZ(0);
+
+   SplfAtr      LIKEDS(RPDFG_SplfAtr_T); 
 
    objNumberForPDF    INT(10) INZ(0); // counts up with newObject
 
@@ -919,16 +925,17 @@ Dcl-Proc RPDFG_startStream  EXPORT;
 
    Dcl-S h_buffer VARCHAR(64) CCSID(*UTF8);
 
-   %LEN(g_PDF.PageStream) = 0;
-   h_buffer = PDF.STREAM_STR;
-   RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_buffer:*DATA):%LEN(h_buffer):ADD_EOL);
+   IF %LEN(g_PDF.PageStream) = 0;
+      h_buffer = PDF.STREAM_STR;
+      RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_buffer:*DATA):%LEN(h_buffer):ADD_EOL);
+   ENDIF;
 
 End-Proc;
 
 // -----------------------------------------------------------------------------
-// add something to the stream of a page object
+// add a UTF8 parameter value to the stream of a page object
 // -----------------------------------------------------------------------------
-Dcl-Proc RPDFG_addToStream  EXPORT;
+Dcl-Proc RPDFG_addToStreamUTF8  EXPORT;
    Dcl-Pi *n;
       p_string        VARCHAR(1024)      CONST OPTIONS(*TRIM) CCSID(*UTF8);
    End-PI;
@@ -937,6 +944,21 @@ Dcl-Proc RPDFG_addToStream  EXPORT;
 
    h_string = p_string;
    RPDFG_add(%ADDR(g_PDF.PageStream):%ADDR(h_string):%LEN(h_string):ADD_EOL);
+
+End-Proc;
+
+// -----------------------------------------------------------------------------
+// add a hex value via pointer to the stream of a page object
+// -----------------------------------------------------------------------------
+Dcl-Proc RPDFG_addToStreamHex  EXPORT;
+   Dcl-Pi *n;
+      p_Ptr_buffer    POINTER  CONST;
+      p_Len_buffer    INT(10)  CONST;
+   End-PI;
+
+   RPDFG_add(%ADDR(g_PDF.PageStream):
+             p_Ptr_buffer:
+             p_Len_buffer);
 
 End-Proc;
 
@@ -1244,6 +1266,7 @@ Dcl-Proc RPDFG_openPdfFile  EXPORT;
       h_Path += '/';
    ENDFOR;
 
+   g_PDF.SplfAtr = p_SplfAtr;
 
    g_PDF.PDF_FileName = p_PDF_Path + '/' + p_PDF_File;
    g_PDF.PDF_FileName = RPDFG_replaceSubstVar(g_PDF.PDF_FileName:p_SplfAtr);
@@ -1402,25 +1425,160 @@ End-Proc;
 // -----------------------------------------------------------------------------
 
 
-// -----------------------------------------------------------------------------
-// create greenbar stream
-// -----------------------------------------------------------------------------
-Dcl-Proc RPDFG_createGreenbar EXPORT;
-   Dcl-Pi *n;
-      p_PtrToBuffer    POINTER      CONST;
-      p_PtrFromBuffer  POINTER      CONST;
-      p_Len            INT(10)      CONST;
-      p_add_Special    VARCHAR(10)  CONST OPTIONS(*NOPASS);
+// =====================================================================================
+// Insert some info on the page on the very bottom
+// =====================================================================================
+Dcl-Proc RPDFG_createPrePrintForm_JobInfo EXPORT;
+   Dcl-PI *N;
+      p_Ptr_OutString POINTER CONST;
    End-PI;
 
-   Dcl-DS h_ToBuffer  QUALIFIED BASED(p_PtrToBuffer);
-      BufferLength      INT(10);
-      BufferValue       CHAR(100000) CCSID(*HEX);
+   Dcl-S  h_FontNumber    INT(10)  INZ(2);
+   Dcl-S  h_FontSize   PACKED(8:3) INZ(6);
+   Dcl-S  h_line2Write1252  VARCHAR(1024) CCSID(1252);
+   Dcl-S  h_string          VARCHAR(1024) CCSID(1252);
+   Dcl-S  h_colorString     VARCHAR(64)   CCSID(1252);
+
+   h_colorString = '.2 g'; // grey
+
+
+   // "q"
+   h_string = PDF.GRAPHICS_STATE_PUSH;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/BT"
+   h_string = PDF.TEXTBLOCK_BEGIN;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/F2 6 Tf"
+   h_string = '/' + 
+              PDF.FONT_SELECT_NUMBER + %CHAR(h_FontNumber) + ' ' +
+                                       %CHAR(h_FontSize) + ' ' + PDF.TEXT_FONT_RESSOURCE;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_colorString:*DATA):%LEN(h_colorString):ADD_EOL);
+
+   // "1 0 0 1 0 0 Tm"
+   h_string = PDF.MATRIX_SCALE_1_1 + 
+            '10' + ' ' + '10' + ' ' + PDF.TEXT_MATRIX;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   h_line2Write1252 = 'Job: ' + g_PDF.SplfAtr.Job_Name;
+   // "(text) Tj"
+   h_string = '(' + h_line2Write1252 + ') ' + PDF.TEXT_DRAW;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   // "/ET"
+   h_string = PDF.TEXTBLOCK_END;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "Q"
+   h_string = PDF.GRAPHICS_STATE_POP;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+End-Proc;
+
+// =====================================================================================
+// create a "pre printed" form with small numbers on the left and right side of the page
+// =====================================================================================
+Dcl-Proc RPDFG_createPrePrintForm_Numbers EXPORT;
+   Dcl-PI *N;
+      p_Ptr_OutString POINTER CONST;
+   End-PI;
+
+   Dcl-DS Pos QUALIFIED;
+      X       PACKED(8:3);
+      Y       PACKED(8:3);
    End-DS;
-   Dcl-S  h_FromBuffer  CHAR(100000) BASED(p_PtrFromBuffer) CCSID(*HEX);
+
+   Dcl-DS oldPos   LIKEDS(Pos);
+   Dcl-DS relative LIKEDS(Pos);
+
+   Dcl-DS h_LineNumber  QUALIFIED;
+      numeric          ZONED(3:0);
+      alpha3            CHAR(3) Pos(1);
+      alpha2            CHAR(2) Pos(2);
+   End-DS;
+
+   Dcl-S  h_FontNumber    INT(10)  INZ(2);
+   Dcl-S  h_FontSize   PACKED(8:3) INZ(6);
+   Dcl-S  h_line2Write1252  VARCHAR(1024) CCSID(1252);
+   Dcl-S  h_string          VARCHAR(1024) CCSID(1252);
+   Dcl-S  h_colorString     VARCHAR(64)   CCSID(1252);
+
+   Dcl-S  i           INT(10) INZ(0);
+
+   h_colorString = '0 1 0 ' + PDF.NON_STROKE_COLOR; // green
+
+   // "q"
+   h_string = PDF.GRAPHICS_STATE_PUSH;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/BT"
+   h_string = PDF.TEXTBLOCK_BEGIN;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "/F2 6 Tf"
+   h_string = '/' + 
+              PDF.FONT_SELECT_NUMBER + %CHAR(h_FontNumber) + ' ' +
+                                       %CHAR(h_FontSize) + ' ' + PDF.TEXT_FONT_RESSOURCE;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_colorString:*DATA):%LEN(h_colorString):ADD_EOL);
+
+   FOR h_LineNumber.numeric = 1 TO g_PDF.SplfAtr.Page_Length;
+
+      RPDFG_calcLinePos(h_LineNumber.numeric:0:Pos.X:Pos.Y);
+      // "1 0 0 1 100.00 700.00 Tm"
+      h_string = PDF.MATRIX_SCALE_1_1 + 
+               %CHAR(Pos.X) + ' ' + %CHAR(Pos.Y) + ' ' + PDF.TEXT_MATRIX;
+      RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+      // RPDFG_calcLinePos(h_LineNumber.numeric:0:Pos.X:Pos.Y);
+      // EXSR corrPos;
+
+      h_line2Write1252 = h_LineNumber.alpha3;
+      IF g_PDF.SplfAtr.Page_Length < 100;
+         h_line2Write1252 = h_LineNumber.alpha2;
+      ENDIF;
+
+      // "(text) Tj"
+      h_string = '(' + h_line2Write1252 + ') ' + PDF.TEXT_DRAW;
+      RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+      RPDFG_calcLinePos(h_LineNumber.numeric:0:Pos.X:Pos.Y);
+      // "1 0 0 1 100.00 700.00 Tm"
+      h_string = PDF.MATRIX_SCALE_1_1 + 
+               %CHAR(Pos.X) + ' ' + %CHAR(Pos.Y) + ' ' + PDF.TEXT_MATRIX;
+      RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+      // RPDFG_calcLinePos(h_LineNumber.numeric:0:Pos.X:Pos.Y);
+      // EXSR corrPos;
+
+      // "(text) Tj"
+      h_string = '(' + h_line2Write1252 + ') ' + PDF.TEXT_DRAW;
+      RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   ENDFOR;
+
+   // "/ET"
+   h_string = PDF.TEXTBLOCK_END;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+   // "Q"
+   h_string = PDF.GRAPHICS_STATE_POP;
+   RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+
+   RETURN;
+   // -----------------------------------------------------------------------------
+   BEGSR corrPos;
+      relative.X = Pos.X - oldPos.X;
+      relative.Y = Pos.Y - oldPos.Y;
+      IF relative.X <> 0 OR relative.Y <> 0;
+         // "1 2 Td"
+         h_string = %CHAR(relative.X) + ' ' + 
+                    %CHAR(relative.Y) + ' ' + PDF.TEXT_RELATIVE_POS;
+         RPDFG_add(p_Ptr_OutString:%ADDR(h_string:*DATA):%LEN(h_string):ADD_EOL);
+         oldPos = Pos;
+      ENDIF;
+   ENDSR;
+
 End-Proc;
 // -----------------------------------------------------------------------------
-
 
 
 // -----------------------------------------------------------------------------

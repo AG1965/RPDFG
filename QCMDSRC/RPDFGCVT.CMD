@@ -38,7 +38,7 @@
 
              PARM      KWD(OPTIONS) TYPE(*CHAR) LEN(10) SNGVAL(*NONE) MAX(10) +
                           DFT(*NONE) RSTD(*YES) +
-                          SPCVAL((*NONE) (*GREENBAR) (*NUMBERS)) +
+                          SPCVAL((*NONE) (*JOBINFO) (*GREENBAR) (*NUMBERS)) +
                           PROMPT(CMD0023) PMTCTL(*PMTRQS)
 
  QUALJOB:    QUAL       TYPE(*NAME) LEN(10)
