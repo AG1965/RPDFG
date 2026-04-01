@@ -220,10 +220,13 @@ ADDMSGD MSGID(RPDF009) +
         FMT((*BIN 4) (*BIN 4) (*CHAR 16) (*CHAR 128) (*CHAR 128))
 
 /* -------------------------------------------------------------------------- */
-CRTCMD CMD(&LIB/RPDFGCVT) +            
-       PGM(&LIB/RPDFGCVT) +
-       PRDLIB(&LIB) +            
-       SRCSTMF('QCMDSRC/RPDFGCVT.CMD')
+CRTCMD  CMD(&LIB/RPDFGCVT) +            
+        PGM(&LIB/RPDFGCVT) +
+        PRDLIB(&LIB) +      
+        PMTFILE(&LIB/RPDFGMSGF) + 
+        HLPPNLGRP(&LIB/RPDFGCVT) +
+        HLPID(*CMD) +                   
+        SRCSTMF('QCMDSRC/RPDFGCVT.CMD')
 
 CRTSQLRPGI OBJ(&LIB/RPDFG) +
            SRCSTMF('QRPGMOD/RPDFG.SQLRPGLE') +
