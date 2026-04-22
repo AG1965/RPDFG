@@ -18,7 +18,6 @@ Dcl-DS myOutput       QUALIFIED;
 End-DS;
 
 Dcl-S myRuler  LIKE(myOutput.Line);
-Dcl-S myHelper CHAR(37);
 
 Dcl-DS QualObj_T  QUALIFIED TEMPLATE;
    Name                CHAR(10);
@@ -65,57 +64,22 @@ Dcl-PI *N;
    PI_PagRtt     PACKED(3:0);
    PI_Font       LIKEDS(PI_Font_T);
    PI_Outq       LIKEDS(QualObj_T);
-   PI_PrtDev     CHAR(10);
    PI_Hold       CHAR(10);
    PI_Save       CHAR(10);
 End-PI;
 
-Dcl-DS OUTQ_INFO  QUALIFIED;
-   NAME            CHAR(10);
-   LIBRARY_NAME    CHAR(10);
-   MFRMDLTYP       VARCHAR(17);
-   WSCSTLIB        CHAR(10);
-   WSCSTNAM        CHAR(10);
-End-DS;
-
-IF PI_Outq.Name = '*DEV';
-
-   EXEC SQL SELECT OUTPUT_QUEUE_NAME, OUTPUT_QUEUE_LIBRARY_NAME,
-                  COALESCE(MANUFACTURER_TYPE_AND_MODEL, ''),
-                  COALESCE(WORKSTATION_CUSTOMIZING_OBJECT_LIBRARY, ''),
-                  COALESCE(WORKSTATION_CUSTOMIZING_OBJECT_NAME, '')
-            INTO :OUTQ_INFO
-            FROM QSYS2.OUTPUT_QUEUE_INFO
-            WHERE PRINTER_DEVICE_NAME = :PI_PrtDev
-               OR OUTPUT_QUEUE_NAME   = :PI_PrtDev
-            LIMIT 1;
-
-ELSE;
-
-   EXEC SQL SELECT OUTPUT_QUEUE_NAME, OUTPUT_QUEUE_LIBRARY_NAME,
-                  MANUFACTURER_TYPE_AND_MODEL,
-                  COALESCE(WORKSTATION_CUSTOMIZING_OBJECT_LIBRARY, ''),
-                  COALESCE(WORKSTATION_CUSTOMIZING_OBJECT_NAME, '')
-            INTO :OUTQ_INFO
-            FROM QSYS2.OUTPUT_QUEUE_INFO
-            WHERE OUTPUT_QUEUE_NAME         = :PI_Outq.Name
-              AND OUTPUT_QUEUE_LIBRARY_NAME = :PI_Outq.LibName
-            LIMIT 1;
-
-ENDIF;
-
-IF SQLCOD = 100;
-   SND-MSG *ESCAPE 'Ausgabewarteschlange ' + PI_Outq.Name + ' nicht gefunden';
-ENDIF;
-IF SQLCOD < 0;
-   SND-MSG *ESCAPE 'SQLCOD ' + %CHAR(SQLCOD);
-ENDIF;
 
 #Cmd = 'OVRPRTF FILE(QSYSPRT)' +
-              ' OUTQ(' + %TRIMR(OUTQ_INFO.LIBRARY_NAME) + '/' +
-                         %TRIMR(OUTQ_INFO.NAME) + ')' +
               ' PAGESIZE(' + %CHAR(PI_PAGESIZE.LINES) + ' ' +
-                              %CHAR(PI_PAGESIZE.COLS) + ')';
+                             %CHAR(PI_PAGESIZE.COLS) + ')' +
+                ' OVRFLW(' + %CHAR(PI_PAGESIZE.LINES) + ')';
+SELECT;
+   WHEN %SUBST(PI_OUTQ.Name:1:1) = '*';
+      #Cmd += ' OUTQ(' + PI_OUTQ.Name + ')';
+   WHEN PI_OUTQ.Name <> '';
+      #Cmd += ' OUTQ(' + %TRIMR(PI_Outq.LibName) + '/' + PI_OUTQ.Name + ')';
+ENDSL;
+
 IF PI_LPI <> 0;
    #Cmd += ' LPI(' + %CHAR(PI_LPI) + ')';
 ENDIF;
@@ -176,7 +140,7 @@ FOR #Page = 1 TO PI_Pages;
       IF #i = 11;
          #l = %LEN(#Cmd_Output);
          IF #l > PI_PageSize.COLS - 30;
-            #Cmd_Output = '...' + %SUBST(#Cmd_Output:#l-(PI_PageSize.Cols-33)+1);
+            #Cmd_Output = '...' + %SUBST(#Cmd_Output:#l-(PI_PageSize.COLS-33)+1);
             #l = %SCANR(' ':#Cmd_Output:1:%INT(#l / 2));
          ENDIF;
          #p = (PI_PageSize.COLS - #l) / 2 + 1;
@@ -195,26 +159,6 @@ FOR #Page = 1 TO PI_Pages;
          %SUBST(myOutput.Line:
                 #p:
                 %LEN(#Cmd_Output)+2) = ' ' + #Cmd_Output;
-      ENDIF;
-
-      myHelper = '';
-      SELECT;
-         WHEN #i = 13;
-            myHelper = ' Output Queue Name:       ' + OUTQ_INFO.NAME;
-         WHEN #i = 14;
-            myHelper = ' Output Queue Library:    ' + OUTQ_INFO.LIBRARY_NAME;
-         WHEN #i = 15;
-            myHelper = ' Manufacturer,Type,Model: ' + OUTQ_INFO.MFRMDLTYP;
-         WHEN #i = 16;
-            myHelper = ' WSCST Name:              ' + OUTQ_INFO.WSCSTNAM;
-         WHEN #i = 17;
-            myHelper = ' WSCST Library:           ' + OUTQ_INFO.WSCSTLIB;
-      ENDSL;
-      IF myHelper <> '';
-         #p = (PI_PageSize.COLS - %SIZE(myHelper)) / 2 + 1;
-         %SUBST(myOutput.Line:
-                #p:
-                %SIZE(myHelper)) = myHelper;
       ENDIF;
 
       IF PI_PageSize.COLS < 378;

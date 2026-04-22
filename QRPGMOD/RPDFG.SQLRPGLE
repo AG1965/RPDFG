@@ -400,6 +400,7 @@ Dcl-Proc RPDFG_setRelation  EXPORT;
 
    myParent.NbrOfKids += 1;
    myParent.Kids(myParent.NbrOfKids) = RPDFG_ref(p_kidObjIdx);
+   myKid.ParentIdx = p_parentObjIdx;
    myKid.Parent = RPDFG_ref(p_parentObjIdx);
 
 End-Proc;
@@ -477,6 +478,8 @@ Dcl-Proc RPDFG_serializeObject  EXPORT;
 
    Dcl-DS myObj       LIKEDS(RPDFG_obj_T) BASED(Ptr_myObj);
    Dcl-S Ptr_myObj    POINTER;
+   Dcl-DS myParent    LIKEDS(RPDFG_obj_T) BASED(Ptr_myParent);
+   Dcl-S Ptr_myParent POINTER;
 
    Dcl-S #i               INT(10);
    Dcl-S myBuffer     VARCHAR(100000) CCSID(*HEX);
@@ -553,6 +556,8 @@ Dcl-Proc RPDFG_serializeObject  EXPORT;
             h_Buffer = '';
          ENDIF;
 
+         // only "Pages" objects have kids, they do also have a "count" - which is
+         // the number of all "Page" objects in the subtree, not only the direct kids!
          IF myObj.NbrOfKids > 0;
             h_kidsString = PDF.ARRAY_STR + ' ';
             FOR #i = 1 TO myObj.NbrOfKids;
@@ -560,11 +565,13 @@ Dcl-Proc RPDFG_serializeObject  EXPORT;
             ENDFOR;
             h_kidsString += PDF.ARRAY_END;
             RPDFG_addDictEntry(p_objIdx:'Kids':h_kidsString);
-            RPDFG_addDictEntry(p_objIdx:'Count':%CHAR(myObj.NbrOfKids));
+            RPDFG_addDictEntry(p_objIdx:'Count':%CHAR(myObj.NbrOfDescendants));
          ENDIF;
 
          IF myObj.Parent <> '';
             RPDFG_addDictEntry(p_objIdx:'Parent':myObj.Parent);
+            Ptr_myParent = RPDFG_rtvPtrObj(myObj.ParentIdx);
+            myParent.NbrOfDescendants += myObj.NbrOfDescendants + 1;
          ENDIF;
 
          IF myObj.SpecialMode = RPDFG_SPECIAL_OBJECT.CONTENTS;
@@ -909,7 +916,7 @@ Dcl-Proc RPDFG_calcLinePos  EXPORT;
       p_PosY         PACKED(8:3);
    End-Pi;
 
-   p_PosY = g_PDF.PageHeight - (p_LineNbr * g_PDF.LPI);
+   p_PosY = g_PDF.PageHeight - (p_LineNbr * g_PDF.LPI) + g_PDF.MarginBottom;
    p_PosX = g_PDF.MarginLeft + (p_CharPos - 1) * g_PDF.CPI;
 
 End-Proc;
@@ -1169,9 +1176,9 @@ End-Proc;
 // -----------------------------------------------------------------------------
 // replace substitution variables in the output file name
 // -----------------------------------------------------------------------------
-Dcl-Proc RPDFG_replaceSubstVar;
+Dcl-Proc RPDFG_replaceSubstVars EXPORT;
    Dcl-Pi *n LIKE(rtn_string) RTNPARM;
-      p_string        VARCHAR(257)      CONST OPTIONS(*TRIM) CCSID(*JOBRUN);
+      p_string        VARCHAR(500)   CONST OPTIONS(*TRIM) CCSID(*JOBRUN);
       p_SplfAtr       LIKEDS(RPDFG_SplfAtr_T) CONST;
    End-PI;
    Dcl-S rtn_string   LIKE(p_string);
@@ -1269,7 +1276,7 @@ Dcl-Proc RPDFG_openPdfFile  EXPORT;
    g_PDF.SplfAtr = p_SplfAtr;
 
    g_PDF.PDF_FileName = p_PDF_Path + '/' + p_PDF_File;
-   g_PDF.PDF_FileName = RPDFG_replaceSubstVar(g_PDF.PDF_FileName:p_SplfAtr);
+   g_PDF.PDF_FileName = RPDFG_replaceSubstVars(g_PDF.PDF_FileName:p_SplfAtr);
 
    g_PDF.Ifs_byteCount = 0;
 

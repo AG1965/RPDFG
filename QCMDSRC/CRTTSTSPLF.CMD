@@ -21,8 +21,7 @@
             PARM       KWD(FONT) TYPE(FONT) +
                           PROMPT('Schriftart')
 
-            PARM       KWD(OUTQ) TYPE(QUALOBJ) DFT(*JOB) +
-                          SNGVAL(*JOB) +
+            PARM       KWD(OUTQ) TYPE(QUALOBJ) +
                           PROMPT('Ausgabewarteschlange')
 
             PARM       KWD(HOLD) TYPE(*CHAR) LEN(10) DFT(*YES) +

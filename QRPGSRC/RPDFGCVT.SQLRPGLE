@@ -14,9 +14,12 @@ Dcl-PR MAIN EXTPGM('RPDFGCVT');
    PDF_File     VARCHAR(128) CONST;
    PaperFormat  VARCHAR( 20) CONST;
    PageRotation    CHAR( 10) CONST;
+   LPI           PACKED(9:3) CONST;
+   CPI           PACKED(9:3) CONST;
    Margins       LIKEDS(RPDFG_Margins_T)  CONST;
-   TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
+   Info          LIKEDS(RPDFG_Info_T)     CONST;
    Options       LIKEDS(RPDFG_Options_T)  CONST;
+   TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
 End-PR;
 
 // max. number of "Pages" objects in the "Pages" tree
@@ -119,9 +122,12 @@ Dcl-Proc MAIN;
       p_PDF_File     VARCHAR(128) CONST;
       p_PaperFormat  VARCHAR( 20) CONST;
       p_PageRotation    CHAR( 10) CONST;
+      p_LPI           PACKED(9:3) CONST;
+      p_CPI           PACKED(9:3) CONST;
       p_Margins       LIKEDS(RPDFG_Margins_T)  CONST;
-      p_TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
+      p_Info          LIKEDS(RPDFG_Info_T)     CONST;
       p_Options       LIKEDS(RPDFG_Options_T)  CONST;
+      p_TimeZones     LIKEDS(RPDFG_TimeZone_T) CONST;
    End-PI;
 
    Dcl-DS h_QualJob QUALIFIED;
@@ -142,6 +148,8 @@ Dcl-Proc MAIN;
    Dcl-S  h_OutBuffer      VARCHAR(100000) INZ('') CCSID(*UTF8);
 
    Dcl-S  h_Cmd            VARCHAR(2000) INZ('');
+
+   Dcl-S  h_string         VARCHAR(512);
 
    // various object indices
    Dcl-S  i_Root           INT(10);
@@ -165,13 +173,14 @@ Dcl-Proc MAIN;
 
    // pages depth - needed for page tree structure
    // how many elements are on each level of the page tree
-   Dcl-DS h_PageDepth      DIM(10) QUALIFIED;
+   Dcl-DS h_PagesDepth     DIM(10) QUALIFIED;
       count                INT(10) INZ(0);
       objIdx               INT(10) INZ(0);
    End-DS;
-   Dcl-S  h_PageDepthMax   INT(10);
+   Dcl-S  h_PagesDepthMax   INT(10);
    // how many Page-objects fit into all Pages objects
    Dcl-S  h_DepthMaxPages  INT(10);
+   Dcl-S  #makeNewPages    IND;
 
    Dcl-S  h_Resources_string1 VARCHAR(1000) CCSID(*UTF8);
    Dcl-S  h_Resources_string2 VARCHAR(1000) CCSID(*UTF8);
@@ -346,6 +355,24 @@ Dcl-Proc MAIN;
                                  SplfAtr(1).Page_Length:
                                  SplfAtr(1).Page_Width);
 
+   // root object
+   i_Root    = RPDFG_newObject();
+   RPDFG_addDictEntry(i_Root:'Type':'/Catalog');
+   pdfObjRef_Root = RPDFG_ref(i_Root);
+
+   // "root" "Pages" object
+   i_PagesRoot = RPDFG_newObject();
+   RPDFG_addDictEntry(i_PagesRoot:'Type':'/Pages');
+   // put this in the tree
+   h_PagesDepth(1).count  = 1;
+   h_PagesDepth(1).objIdx = i_PagesRoot;
+   // add the reference to the Pages object to the root object
+   RPDFG_addDictEntry(i_Root:'Pages' :RPDFG_ref(i_PagesRoot));
+
+   // "Root" is now ready and can be written; Object Index will be re-used for antoher object
+   RPDFG_serializeObject(i_Root);
+
+
    // Strategy for large PDF files with many pages:
    // The PDF-file has to know it's pages-page-tree with parent kids and count 
    // of kids+grandchildren.
@@ -356,31 +383,22 @@ Dcl-Proc MAIN;
    // ---------------------------------------------------------------------
    // Calculate the maximum depth of the page tree with the number of pages
    // and the number of kids per Pages object.
-   h_PageDepthMax  = 0;
-   h_DepthMaxPages = 1;
+   // Example - the spooled file has 47 pages.
+   // Lvl  max.Pages  > actual pages
+   //  1       5      >      47     "root-pages" object   (1 Pages object with 5 kids)
+   //  2      25      >      47     "pages" objects       (5 Pages objects with 5 kids each)
+   //  3     125      >      47     "pages" objects       (25 Pages objects with max. 5 kids each)
+   // So the page tree will have 3 levels: root-Pages-Pages-Pages
+   h_PagesDepthMax  = 1;
+   h_DepthMaxPages = PAGE_PER_PAGES;
    DOU h_DepthMaxPages > SplfAtr(1).Total_Pages;
-      h_PageDepthMax  += 1;
+      h_PagesDepthMax  += 1;
       h_DepthMaxPages  = h_DepthMaxPages * PAGE_PER_PAGES;
+      h_PagesDepth(h_PagesDepthMax).objIdx = RPDFG_newObject();
+      RPDFG_addDictEntry(h_PagesDepth(h_PagesDepthMax).objIdx:'Type':'/Pages');
+      RPDFG_setRelation(h_PagesDepth(h_PagesDepthMax-1).objIdx:
+                        h_PagesDepth(h_PagesDepthMax).objIdx);
    ENDDO;
-
-
-
-   // root object
-   i_Root    = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Root:'Type':'/Catalog');
-   pdfObjRef_Root = RPDFG_ref(i_Root);
-
-   // Pages object
-   i_Pages   = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Pages:'Type':'/Pages');
-   // put this in the tree
-   h_PageDepth(1).count  = 1;
-   h_PageDepth(1).objIdx = i_Pages;
-   // add the reference to the Pages object to the root object
-   RPDFG_addDictEntry(i_Root:'Pages' :RPDFG_ref(i_Pages));
-
-   // "Root" is now ready and can be written; Object Index will be re-used for antoher object
-   RPDFG_serializeObject(i_Root);
 
 
    // Page - Font - F1 dictionary
@@ -449,20 +467,22 @@ Dcl-Proc MAIN;
       ENDIF;
    ENDIF;
    // --------------------------------------------------------------------------
+   
    // -------------------------------------------------------
    // This one is needed for every page, so we create it once and reuse the string
    h_MediaBox_string = RPDFG_getMediaBoxString();
+   
    // --------------------------------------------------------------------------
    // check the tree depth and create new "Pages" objects
-   FOR #d = 2 TO h_PageDepthMax - 1;
-      IF h_PageDepth(#d).count < 1;
-         h_PageDepth(#d).count += 1;
-         h_PageDepth(#d).objIdx = RPDFG_newObject();
-         RPDFG_addDictEntry(h_PageDepth(#d).objIdx:'Type':'/Pages');
-         // connect the new "Pages" object to it's parent in the tree
-         RPDFG_addDictEntry(h_PageDepth(#d).objIdx:'Parent' :RPDFG_ref(h_PageDepth(#d-1).objIdx));
-      ENDIF;
-   ENDFOR;
+   // FOR #d = 2 TO h_PagesDepthMax - 1;
+   //    IF h_PagesDepth(#d).count < 1;
+   //       h_PagesDepth(#d).count += 1;
+   //       h_PagesDepth(#d).objIdx = RPDFG_newObject();
+   //       RPDFG_addDictEntry(h_PagesDepth(#d).objIdx:'Type':'/Pages');
+   //       // connect the new "Pages" object to it's parent in the tree
+   //       RPDFG_addDictEntry(h_PagesDepth(#d).objIdx:'Parent' :RPDFG_ref(h_PagesDepth(#d-1).objIdx));
+   //    ENDIF;
+   // ENDFOR;
    // --------------------------------------------------------------------------
 
 
@@ -483,34 +503,44 @@ Dcl-Proc MAIN;
 
          PageCount += 1;
 
-         // check if the current "Pages" tree has place for another "Page" object,
+         // check if the current "Pages" branch has place for another "Page" object,
          // otherwise create a new "Pages" object and so on
-         FOR #d = 2 TO h_PageDepthMax - 1;
-            IF RPDFG_getNumberOfKids(h_PageDepth(#d).objIdx) = PAGES_PER_PAGES;
-               // full, write it
-               RPDFG_serializeObject(h_PageDepth(#d).objIdx);
+         FOR #d = h_PagesDepthMax DOWNTO 2;
+            #makeNewPages = *OFF;
+            IF h_PagesDepth(#d).objIdx = 0;
+               #makeNewPages = *ON;
+            ELSE;
+               IF RPDFG_getNumberOfKids(h_PagesDepth(#d).objIdx) = PAGES_PER_PAGES;
+                  // full, write it
+                  RPDFG_serializeObject(h_PagesDepth(#d).objIdx);
+                  #makeNewPages = *ON;
+               ENDIF;
+            ENDIF;
+
+            IF #makeNewPages;
                // we need a new one
-               h_PageDepth(#d).objIdx = RPDFG_newObject();
-               RPDFG_setRelation(h_PageDepth(#d-1).objIdx:
-                                 h_PageDepth(#d).objIdx);
+               h_PagesDepth(#d).objIdx = RPDFG_newObject();
+               RPDFG_addDictEntry(h_PagesDepth(#d).objIdx:'Type':'/Pages');
+               RPDFG_setRelation(h_PagesDepth(#d-1).objIdx:
+                                 h_PagesDepth(#d).objIdx);
             ENDIF;
          ENDFOR;
 
-         IF h_PageDepthMax > 1;
-            // the current Pages object is the one on the max depth level - 1
-            i_Pages = h_PageDepth(h_PageDepthMax-1).objIdx;
+         IF h_PagesDepthMax > 1;
+            // the current Pages object is the one on the max depth level
+            i_Pages = h_PagesDepth(h_PagesDepthMax).objIdx;
          ELSE;
             // There is only 1 level when the number of total pages < PAGE_PER_PAGES
-            i_Pages = h_PageDepth(1).objIdx;
+            i_Pages = h_PagesDepth(1).objIdx;
          ENDIF;
          // but is there place for another "Page" object?
-         IF RPDFG_getNumberOfKids(i_Pages) = PAGE_PER_PAGES;
-            // full, write it
-            RPDFG_serializeObject(i_Pages);
-            // we need a new one
-            i_Pages = RPDFG_newObject();
-            h_PageDepth(#d).objIdx = i_Pages;
-         ENDIF;
+         // IF RPDFG_getNumberOfKids(i_Pages) = PAGE_PER_PAGES;
+         //    // full, write it
+         //    RPDFG_serializeObject(i_Pages);
+         //    // we need a new one
+         //    i_Pages = RPDFG_newObject();
+         //    h_PagesDepth(#d).objIdx = i_Pages;
+         // ENDIF;
 
          // create Page object
          i_Page = RPDFG_newObject();
@@ -582,11 +612,34 @@ Dcl-Proc MAIN;
 
    RPDFG_serializeObject(i_Page);
    RPDFG_serializeObject(i_Contents);
+   RPDFG_serializeObject(i_Pages);
+
+   FOR #d = h_PagesDepthMax-1 DOWNTO 2;
+      RPDFG_serializeObject(h_PagesDepth(#d).objIdx);
+   ENDFOR;
 
    // "Info" object
    i_Info = RPDFG_newObject();
-   RPDFG_addDictEntry(i_Info:
-                      'Author':'(' + SplfAtr(1).UserName + ')');
+   h_string = %TRIM(p_Info.title);
+   IF h_string <> '';
+      h_string = RPDFG_replaceSubstVars(h_string:SplfAtr(1));
+      RPDFG_addDictEntry(i_Info:'Title':'(' + h_string + ')');
+   ENDIF;
+   h_string = %TRIM(p_Info.author);
+   IF h_string <> '';
+      h_string = RPDFG_replaceSubstVars(h_string:SplfAtr(1));
+      RPDFG_addDictEntry(i_Info:'Author':'(' + h_string + ')');
+   ENDIF;
+   h_string = %TRIM(p_Info.subject);
+   IF h_string <> '';
+      h_string = RPDFG_replaceSubstVars(h_string:SplfAtr(1));
+      RPDFG_addDictEntry(i_Info:'Subject':'(' + h_string + ')');
+   ENDIF;
+   h_string = %TRIM(p_Info.keywords);
+   IF h_string <> '';
+      h_string = RPDFG_replaceSubstVars(h_string:SplfAtr(1));
+      RPDFG_addDictEntry(i_Info:'Keywords':'(' + h_string + ')');
+   ENDIF;
    RPDFG_addDictEntry(i_Info:
                       'CreationDate':'(D:' + %CHAR(SplfAtr(1).CreateTimestamp:*ISO0) + 
                       '+00''00''' +
@@ -595,9 +648,6 @@ Dcl-Proc MAIN;
                       '(RPDFGCVT https://github.com/AG1965/RPDFG)');
    RPDFG_addDictEntry(i_Info:'Producer':
                       '(RPDFG Compiled (D:' + PSDS.CompileUDate + PSDS.CompileTime + ') IBMi)');
-   // /Title (No Title)
-   // /Subject (None)
-   // /Keywords (ClibPDF)
    pdfObjRef_Info = RPDFG_ref(i_Info);
    RPDFG_serializeObject(i_Info);
 

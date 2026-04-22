@@ -41,6 +41,14 @@ Dcl-DS RPDFG_TimeZone_T QUALIFIED TEMPLATE;
    SummerEndSunday    CHAR(1);
 End-DS;
 
+Dcl-DS RPDFG_Info_T QUALIFIED TEMPLATE;
+   NbrOfElems       INT(5);
+   title            VARCHAR( 50);
+   author           VARCHAR( 50);
+   subject          VARCHAR( 50);
+   keywords         VARCHAR(500);
+End-DS;
+
 Dcl-DS RPDFG_Options_T QUALIFIED TEMPLATE;
    NbrOfElems       INT(5);
    value           CHAR(10) DIM(10);
@@ -52,8 +60,10 @@ Dcl-DS RPDFG_obj_T QUALIFIED TEMPLATE;
    SpecialMode        CHAR(1) INZ(RPDFG_SPECIAL_OBJECT.NONE);
    isArray            CHAR(1) INZ(*OFF);
    Parent             LIKE(RPDFG_ref) INZ('');
+   ParentIdx          INT(10) INZ(-1);
    Kids               LIKE(RPDFG_ref) INZ('') DIM(50);
    NbrOfKids          INT(10) INZ(0);
+   NbrOfDescendants   INT(10) INZ(0);
    dictIdx            INT(10) INZ(-1);
    // PtrDict            POINTER INZ(*NULL);
    // PtrStream          POINTER INZ(*NULL);
@@ -241,7 +251,10 @@ Dcl-PR RPDFG_addToStreamTextBlockUcs2   EXTPROC(*DCLCASE);
    string       VARUCS2(378)       CONST;
 End-PR;
 
-
+Dcl-PR RPDFG_replaceSubstVars VARCHAR(500) RTNPARM EXTPROC(*DCLCASE);
+   string        VARCHAR(500) CONST OPTIONS(*TRIM) CCSID(*JOBRUN);
+   SplfAtr       LIKEDS(RPDFG_SplfAtr_T) CONST;
+End-PR;
 
 // Open the IFS file for output
 Dcl-PR RPDFG_openPdfFile   EXTPROC(*DCLCASE);
