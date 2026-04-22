@@ -1,0 +1,5579 @@
+%PDF-1.4
+%ÿÿÿÿ
+1 0 obj << /Type Catalog /Pages 2 0 R >>
+endobj
+3 0 obj << /Type Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+5 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 6 0 R /Parent 4 0 R >>
+endobj
+6 0 obj << /Length 4261 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+7 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 8 0 R /Parent 4 0 R >>
+endobj
+8 0 obj << /Length 12898 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      2) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                          S o u r c e   L i s t i n g) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(     1 **FREE                                                                                                               000001) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(     2 CTL-OPT NOMAIN                                                                                                       000002) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(     3         OPTION\(*NODEBUGIO:*SRCSTMT:*NOUNREF\)                                                                         000003) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000004         DATEDIT\(*YMD\) CCSID\(*EXACT\) CCSIDCVT\(*LIST:*EXCP\)                                                            000004) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000005         TEXT\('RPDFG - Functions to create a pdf file'\);                                                              000005) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000006 // -----------------------------------------------------------------------------                                     000006) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000007 // RPDFG - Functions to create a pdf file                                                                            000007) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000008 // https://ag1965.github.io/RPDFG/                                                                                   000008) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000009 // -----------------------------------------------------------------------------                                     000009) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000010                                                                                                                      000010) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000011 // as i'm using pointers to these, i can't define this DS as CONST. :-\(                                              000011) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(        * Compiler Options in Effect:                                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(        *  Text 'description' . . . . . . . :                                *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(        *                 RPDFG - Functions to create a pdf file             *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(        *  Generation severity level  . . . :   10                           *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(        *  Compiler options . . . . . . . . :   *XREF      *GEN              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(        *                                       *NOSECLVL  *SHOWCPY          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(        *                                       *EXPDDS    *EXT              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(        *                                       *NOSHOWSKP *SRCSTMT          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(        *                                       *NODEBUGIO *NOUNREF          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(        *                                       *NOEVENTF                    *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(        *  Optimization level . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(        *  Source listing indentation . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(        *  Type conversion options  . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(        *  Sort sequence  . . . . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(        *  Language identifier  . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(        *  Truncate numeric . . . . . . . . :   *YES                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(        *  Fix numeric  . . . . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(        *  Allow null values  . . . . . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(        *  Storage model . . .  . . . . . . :   *INHERIT                     *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(        *  Binding directory from Command . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(        *  Binding directory from Source  . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(        *  Enable performance collection  . :   *PEP                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(        *  Profiling data . . . . . . . . . :   *NOCOL                       *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(        *  Generate program interface . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(        *  Require prototype for export . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000012 Dcl-DS  PDF QUALIFIED;                                                                                               000012) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000013    HEADER                CHAR\( 8\) INZ\('%PDF-1.4'\);                                                                   000013) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000014    OBJ_STR               CHAR\( 3\) INZ\('obj'\);                                                                        000014) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000015    OBJ_END               CHAR\( 6\) INZ\('endobj'\);                                                                     000015) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000016    STREAM_STR            CHAR\( 6\) INZ\('stream'\);                                                                     000016) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000017    STREAM_END            CHAR\( 9\) INZ\('endstream'\);                                                                  000017) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000018    ARRAY_STR             CHAR\( 1\) INZ\('['\);                                                                          000018) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000019    ARRAY_END             CHAR\( 1\) INZ\(']'\);                                                                          000019) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000020    DICTIONARY_STR        CHAR\( 2\) INZ\('<<'\);                                                                         000020) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000021    DICTIONARY_END        CHAR\( 3\) INZ\(' >>'\);                                                                        000021) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+9 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 10 0 R /Parent 4 0 R >>
+endobj
+10 0 obj << /Length 24152 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      2) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                          S o u r c e   L i s t i n g) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(     1 **FREE                                                                                                               000001) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(     2 CTL-OPT NOMAIN                                                                                                       000002) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(     3         OPTION\(*NODEBUGIO:*SRCSTMT:*NOUNREF\)                                                                         000003) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000004         DATEDIT\(*YMD\) CCSID\(*EXACT\) CCSIDCVT\(*LIST:*EXCP\)                                                            000004) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000005         TEXT\('RPDFG - Functions to create a pdf file'\);                                                              000005) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000006 // -----------------------------------------------------------------------------                                     000006) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000007 // RPDFG - Functions to create a pdf file                                                                            000007) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000008 // https://ag1965.github.io/RPDFG/                                                                                   000008) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000009 // -----------------------------------------------------------------------------                                     000009) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000010                                                                                                                      000010) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000011 // as i'm using pointers to these, i can't define this DS as CONST. :-\(                                              000011) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(        * Compiler Options in Effect:                                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(        *  Text 'description' . . . . . . . :                                *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(        *                 RPDFG - Functions to create a pdf file             *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(        *  Generation severity level  . . . :   10                           *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(        *  Compiler options . . . . . . . . :   *XREF      *GEN              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(        *                                       *NOSECLVL  *SHOWCPY          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(        *                                       *EXPDDS    *EXT              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(        *                                       *NOSHOWSKP *SRCSTMT          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(        *                                       *NODEBUGIO *NOUNREF          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(        *                                       *NOEVENTF                    *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(        *  Optimization level . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(        *  Source listing indentation . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(        *  Type conversion options  . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(        *  Sort sequence  . . . . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(        *  Language identifier  . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(        *  Truncate numeric . . . . . . . . :   *YES                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(        *  Fix numeric  . . . . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(        *  Allow null values  . . . . . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(        *  Storage model . . .  . . . . . . :   *INHERIT                     *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(        *  Binding directory from Command . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(        *  Binding directory from Source  . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(        *  Enable performance collection  . :   *PEP                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(        *  Profiling data . . . . . . . . . :   *NOCOL                       *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(        *  Generate program interface . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(        *  Require prototype for export . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000012 Dcl-DS  PDF QUALIFIED;                                                                                               000012) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000013    HEADER                CHAR\( 8\) INZ\('%PDF-1.4'\);                                                                   000013) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000014    OBJ_STR               CHAR\( 3\) INZ\('obj'\);                                                                        000014) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000015    OBJ_END               CHAR\( 6\) INZ\('endobj'\);                                                                     000015) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000016    STREAM_STR            CHAR\( 6\) INZ\('stream'\);                                                                     000016) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000017    STREAM_END            CHAR\( 9\) INZ\('endstream'\);                                                                  000017) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000018    ARRAY_STR             CHAR\( 1\) INZ\('['\);                                                                          000018) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000019    ARRAY_END             CHAR\( 1\) INZ\(']'\);                                                                          000019) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000020    DICTIONARY_STR        CHAR\( 2\) INZ\('<<'\);                                                                         000020) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000021    DICTIONARY_END        CHAR\( 3\) INZ\(' >>'\);                                                                        000021) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      3) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000022    TEXTBLOCK_BEGIN       CHAR\( 2\) INZ\('BT'\);                                                                         000022) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000023    TEXTBLOCK_END         CHAR\( 2\) INZ\('ET'\);                                                                         000023) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000024    FONT_SELECT_NUMBER    CHAR\( 1\) INZ\('F'\);                                                                          000024) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000025    TEXT_FONT_RESSOURCE   CHAR\( 2\) INZ\('Tf'\);                                                                         000025) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000026    MATRIX_SCALE_1_1      CHAR\( 8\) INZ\('1 0 0 1 '\);                                                                   000026) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000027    TEXT_MATRIX           CHAR\( 2\) INZ\('Tm'\);                                                                         000027) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000028    TEXT_DRAW             CHAR\( 2\) INZ\('Tj'\);                                                                         000028) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000029    XREF                  CHAR\( 4\) INZ\('xref'\);                                                                       000029) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000030    TRAILER               CHAR\( 7\) INZ\('trailer'\);                                                                    000030) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000031    STARTXREF             CHAR\( 9\) INZ\('startxref'\);                                                                  000031) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000032    EOF                   CHAR\( 5\) INZ\('%%EOF'\);                                                                      000032) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000033 End-DS;                                                                                                              000033) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000034                                                                                                                      000034) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000035                                                                                                                      000035) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000036                                                                                                                      000036) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000037 Dcl-DS CCSID_JOBRUN CONST QUALIFIED;                                                                                 000037) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000038    SLASH          CHAR\(1\) INZ\('/'\) CCSID\(*JOBRUN\);                                                                   000038) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000039    COLON          CHAR\(1\) INZ\(':'\) CCSID\(*JOBRUN\);                                                                   000039) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000040    UNDERLINE      CHAR\(1\) INZ\('_'\) CCSID\(*JOBRUN\);                                                                   000040) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000041    BACKSLASH      CHAR\(1\) INZ\('\\'\) CCSID\(*JOBRUN\);                                                                   000041) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000042    BRACKET_OPEN   CHAR\(1\) INZ\('\('\) CCSID\(*JOBRUN\);                                                                   000042) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000043    BRACKET_CLOSE  CHAR\(1\) INZ\('\)'\) CCSID\(*JOBRUN\);                                                                   000043) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000044 End-DS;                                                                                                              000044) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000045                                                                                                                      000045) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000046 Dcl-DS CCSID_HEX    CONST QUALIFIED;                                                                                 000046) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000047    EOL            CHAR\(2\) INZ\(x'0D0A'\)           CCSID\(*HEX\);                                                        000047) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000048    HEADER_LINE2   CHAR\(7\) INZ\(x'25FFFFFFFF0D0A'\) CCSID\(*HEX\);                                                        000048) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000049 End-DS;                                                                                                              000049) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000050                                                                                                                      000050) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000051 Dcl-C  ADD_EOL  'EOL';                                                                                               000051) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000052                                                                                                                      000052) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000053 Dcl-S  RPDFGMSGF  CHAR\(21\) CONST CCSID\(*JOBRUN\) INZ\('*LIBL/RPDFGMSGF'\);                                              000053) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000054 Dcl-DS MSGID QUALIFIED CONST;                                                                                        000054) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000055    RPDF001     CHAR\(7\) INZ\('RPDF001'\) CCSID\(*JOBRUN\);                                                                000055) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000056    RPDF003     CHAR\(7\) INZ\('RPDF003'\) CCSID\(*JOBRUN\);                                                                000056) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000057    RPDF004     CHAR\(7\) INZ\('RPDF004'\) CCSID\(*JOBRUN\);                                                                000057) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000058    RPDF005     CHAR\(7\) INZ\('RPDF005'\) CCSID\(*JOBRUN\);                                                                000058) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000059    RPDF006     CHAR\(7\) INZ\('RPDF006'\) CCSID\(*JOBRUN\);                                                                000059) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000060    RPDF007     CHAR\(7\) INZ\('RPDF007'\) CCSID\(*JOBRUN\);                                                                000060) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000061    RPDF008     CHAR\(7\) INZ\('RPDF008'\) CCSID\(*JOBRUN\);                                                                000061) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000062    RPDF009     CHAR\(7\) INZ\('RPDF009'\) CCSID\(*JOBRUN\);                                                                000062) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000063 End-DS;                                                                                                              000063) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000064                                                                                                                      000064) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000065                                                                                                                      000065) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000066 // max. number of "Pages" objects in the "Pages" tree                                                                000066) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000067 Dcl-C  PAGES_PER_PAGES        5;                                                                                     000067) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000068 // max. number of "Page" objects in a "Pages" object                                                                 000068) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000069 Dcl-C  PAGE_PER_PAGES         5;                                                                                     000069) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000070                                                                                                                      000070) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000071 Dcl-C  SQL_OK                 0;                                                                                     000071) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000072 Dcl-C  SQL_ERROR_NOTFOUND     100;                                                                                   000072) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000073                                                                                                                      000073) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000074 Dcl-C  SPLFNBR_ONLY_NUM       0;                                                                                     000074) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000075 Dcl-C  SPLFNBR_LAST_NUM       -1;                                                                                    000075) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000076                                                                                                                      000076) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000077 Dcl-C  MM_IN_1_INCH      25.4000;                                                                                    000077) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+11 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 12 0 R /Parent 4 0 R >>
+endobj
+12 0 obj << /Length 35357 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      2) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                          S o u r c e   L i s t i n g) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(     1 **FREE                                                                                                               000001) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(     2 CTL-OPT NOMAIN                                                                                                       000002) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(     3         OPTION\(*NODEBUGIO:*SRCSTMT:*NOUNREF\)                                                                         000003) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000004         DATEDIT\(*YMD\) CCSID\(*EXACT\) CCSIDCVT\(*LIST:*EXCP\)                                                            000004) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000005         TEXT\('RPDFG - Functions to create a pdf file'\);                                                              000005) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000006 // -----------------------------------------------------------------------------                                     000006) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000007 // RPDFG - Functions to create a pdf file                                                                            000007) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000008 // https://ag1965.github.io/RPDFG/                                                                                   000008) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000009 // -----------------------------------------------------------------------------                                     000009) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000010                                                                                                                      000010) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000011 // as i'm using pointers to these, i can't define this DS as CONST. :-\(                                              000011) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(        * Compiler Options in Effect:                                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(        *  Text 'description' . . . . . . . :                                *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(        *                 RPDFG - Functions to create a pdf file             *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(        *  Generation severity level  . . . :   10                           *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(        *  Compiler options . . . . . . . . :   *XREF      *GEN              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(        *                                       *NOSECLVL  *SHOWCPY          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(        *                                       *EXPDDS    *EXT              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(        *                                       *NOSHOWSKP *SRCSTMT          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(        *                                       *NODEBUGIO *NOUNREF          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(        *                                       *NOEVENTF                    *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(        *  Optimization level . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(        *  Source listing indentation . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(        *  Type conversion options  . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(        *  Sort sequence  . . . . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(        *  Language identifier  . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(        *  Truncate numeric . . . . . . . . :   *YES                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(        *  Fix numeric  . . . . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(        *  Allow null values  . . . . . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(        *  Storage model . . .  . . . . . . :   *INHERIT                     *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(        *  Binding directory from Command . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(        *  Binding directory from Source  . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(        *  Enable performance collection  . :   *PEP                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(        *  Profiling data . . . . . . . . . :   *NOCOL                       *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(        *  Generate program interface . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(        *  Require prototype for export . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000012 Dcl-DS  PDF QUALIFIED;                                                                                               000012) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000013    HEADER                CHAR\( 8\) INZ\('%PDF-1.4'\);                                                                   000013) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000014    OBJ_STR               CHAR\( 3\) INZ\('obj'\);                                                                        000014) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000015    OBJ_END               CHAR\( 6\) INZ\('endobj'\);                                                                     000015) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000016    STREAM_STR            CHAR\( 6\) INZ\('stream'\);                                                                     000016) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000017    STREAM_END            CHAR\( 9\) INZ\('endstream'\);                                                                  000017) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000018    ARRAY_STR             CHAR\( 1\) INZ\('['\);                                                                          000018) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000019    ARRAY_END             CHAR\( 1\) INZ\(']'\);                                                                          000019) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000020    DICTIONARY_STR        CHAR\( 2\) INZ\('<<'\);                                                                         000020) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000021    DICTIONARY_END        CHAR\( 3\) INZ\(' >>'\);                                                                        000021) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      3) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000022    TEXTBLOCK_BEGIN       CHAR\( 2\) INZ\('BT'\);                                                                         000022) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000023    TEXTBLOCK_END         CHAR\( 2\) INZ\('ET'\);                                                                         000023) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000024    FONT_SELECT_NUMBER    CHAR\( 1\) INZ\('F'\);                                                                          000024) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000025    TEXT_FONT_RESSOURCE   CHAR\( 2\) INZ\('Tf'\);                                                                         000025) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000026    MATRIX_SCALE_1_1      CHAR\( 8\) INZ\('1 0 0 1 '\);                                                                   000026) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000027    TEXT_MATRIX           CHAR\( 2\) INZ\('Tm'\);                                                                         000027) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000028    TEXT_DRAW             CHAR\( 2\) INZ\('Tj'\);                                                                         000028) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000029    XREF                  CHAR\( 4\) INZ\('xref'\);                                                                       000029) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000030    TRAILER               CHAR\( 7\) INZ\('trailer'\);                                                                    000030) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000031    STARTXREF             CHAR\( 9\) INZ\('startxref'\);                                                                  000031) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000032    EOF                   CHAR\( 5\) INZ\('%%EOF'\);                                                                      000032) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000033 End-DS;                                                                                                              000033) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000034                                                                                                                      000034) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000035                                                                                                                      000035) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000036                                                                                                                      000036) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000037 Dcl-DS CCSID_JOBRUN CONST QUALIFIED;                                                                                 000037) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000038    SLASH          CHAR\(1\) INZ\('/'\) CCSID\(*JOBRUN\);                                                                   000038) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000039    COLON          CHAR\(1\) INZ\(':'\) CCSID\(*JOBRUN\);                                                                   000039) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000040    UNDERLINE      CHAR\(1\) INZ\('_'\) CCSID\(*JOBRUN\);                                                                   000040) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000041    BACKSLASH      CHAR\(1\) INZ\('\\'\) CCSID\(*JOBRUN\);                                                                   000041) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000042    BRACKET_OPEN   CHAR\(1\) INZ\('\('\) CCSID\(*JOBRUN\);                                                                   000042) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000043    BRACKET_CLOSE  CHAR\(1\) INZ\('\)'\) CCSID\(*JOBRUN\);                                                                   000043) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000044 End-DS;                                                                                                              000044) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000045                                                                                                                      000045) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000046 Dcl-DS CCSID_HEX    CONST QUALIFIED;                                                                                 000046) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000047    EOL            CHAR\(2\) INZ\(x'0D0A'\)           CCSID\(*HEX\);                                                        000047) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000048    HEADER_LINE2   CHAR\(7\) INZ\(x'25FFFFFFFF0D0A'\) CCSID\(*HEX\);                                                        000048) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000049 End-DS;                                                                                                              000049) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000050                                                                                                                      000050) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000051 Dcl-C  ADD_EOL  'EOL';                                                                                               000051) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000052                                                                                                                      000052) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000053 Dcl-S  RPDFGMSGF  CHAR\(21\) CONST CCSID\(*JOBRUN\) INZ\('*LIBL/RPDFGMSGF'\);                                              000053) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000054 Dcl-DS MSGID QUALIFIED CONST;                                                                                        000054) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000055    RPDF001     CHAR\(7\) INZ\('RPDF001'\) CCSID\(*JOBRUN\);                                                                000055) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000056    RPDF003     CHAR\(7\) INZ\('RPDF003'\) CCSID\(*JOBRUN\);                                                                000056) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000057    RPDF004     CHAR\(7\) INZ\('RPDF004'\) CCSID\(*JOBRUN\);                                                                000057) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000058    RPDF005     CHAR\(7\) INZ\('RPDF005'\) CCSID\(*JOBRUN\);                                                                000058) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000059    RPDF006     CHAR\(7\) INZ\('RPDF006'\) CCSID\(*JOBRUN\);                                                                000059) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000060    RPDF007     CHAR\(7\) INZ\('RPDF007'\) CCSID\(*JOBRUN\);                                                                000060) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000061    RPDF008     CHAR\(7\) INZ\('RPDF008'\) CCSID\(*JOBRUN\);                                                                000061) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000062    RPDF009     CHAR\(7\) INZ\('RPDF009'\) CCSID\(*JOBRUN\);                                                                000062) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000063 End-DS;                                                                                                              000063) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000064                                                                                                                      000064) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000065                                                                                                                      000065) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000066 // max. number of "Pages" objects in the "Pages" tree                                                                000066) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000067 Dcl-C  PAGES_PER_PAGES        5;                                                                                     000067) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000068 // max. number of "Page" objects in a "Pages" object                                                                 000068) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000069 Dcl-C  PAGE_PER_PAGES         5;                                                                                     000069) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000070                                                                                                                      000070) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000071 Dcl-C  SQL_OK                 0;                                                                                     000071) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000072 Dcl-C  SQL_ERROR_NOTFOUND     100;                                                                                   000072) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000073                                                                                                                      000073) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000074 Dcl-C  SPLFNBR_ONLY_NUM       0;                                                                                     000074) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000075 Dcl-C  SPLFNBR_LAST_NUM       -1;                                                                                    000075) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000076                                                                                                                      000076) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000077 Dcl-C  MM_IN_1_INCH      25.4000;                                                                                    000077) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      4) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000078 Dcl-C  POINTS_IN_1_INCH  72.0000;                                                                                    000078) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000079 Dcl-C  BORDER_IN_POINTS  14.1732; // 5mm in points \(1/72 inch\)                                                       000079) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000080                                                                                                                      000080) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000081 Dcl-ENum PAGRTT QUALIFIED;                                                                                           000081) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000082    AUTO              '*AUTO';                                                                                        000082) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000083    DEVD              '*DEVD';                                                                                        000083) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000084    COR               '*COR';                                                                                         000084) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000085    PORTRAIT          '0';                                                                                            000085) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000086    LANDSCAPE         '90';                                                                                           000086) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000087    PORTRAIT_REVERSE  '180';                                                                                          000087) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000088    LANDSCAPE_REVERSE '270';                                                                                          000088) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000089 End-ENum;                                                                                                            000089) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000090                                                                                                                      000090) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000091                                                                                                                      000091) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000092                                                                                                                      000092) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000093                                                                                                                      000093) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000094                                                                                                                      000094) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000095 Dcl-PR QCMDEXC EXTPGM\('QCMDEXC'\);                                                                                    000095) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000096    CmdString     CHAR\(32702\) CONST OPTIONS\(*VARSIZE\);                                                                000096) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000097    CmdLength   PACKED\(15:5\)  CONST;                                                                                  000097) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000098 End-PR;                                                                                                              000098) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000099                                                                                                                      000099) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000100 // -----------------------------------------------------------------------------                                     000100) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000101 // global fields                                                                                                     000101) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000102 // objects - this is a reusable pool                                                                                 000102) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000103 Dcl-DS RPDFG_g_obj     LIKEDS\(RPDFG_obj_T\) DIM\(100\) INZ\(*LIKEDS\);                                                    000103) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000104 Dcl-S  RPDFG_g_objIdx  LIKE\(RPDFG_objIdx_T\) Inz\(0\);                                                                  000104) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000105 // objects might contain dictionaries, this is a reusable pool                                                       000105) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000106 Dcl-DS RPDFG_g_dict    LIKEDS\(RPDFG_dict_T\) DIM\(100\) INZ\(*LIKEDS\);                                                   000106) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000107 Dcl-S  RPDFG_g_dictIdx LIKE\(RPDFG_dictIdx_T\) Inz\(0\);                                                                 000107) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000108                                                                                                                      000108) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000109 Dcl-DS g_PDF QUALIFIED;                                                                                              000109) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000110    // physical size pf the paper = MediaBox in PDF                                                                   000110) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000111    PaperHeight  PACKED\(8:3\) INZ\(0\);                                                                                  000111) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000112    PaperWidth   PACKED\(8:3\) INZ\(0\);                                                                                  000112) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000113    // margins \(5mm\)                                                                                                  000113) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000114    MarginTop    PACKED\(8:3\) INZ\(0\);                                                                                  000114) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000115    MarginBottom PACKED\(8:3\) INZ\(0\);                                                                                  000115) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000116    MarginLeft   PACKED\(8:3\) INZ\(0\);                                                                                  000116) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000117    MarginRight  PACKED\(8:3\) INZ\(0\);                                                                                  000117) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000118    // size of the printable area = CropBox in PDF                                                                    000118) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000119    PageHeight   PACKED\(8:3\) INZ\(0\);                                                                                  000119) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000120    PageWidth    PACKED\(8:3\) INZ\(0\);                                                                                  000120) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000121    LPI          PACKED\(8:3\) INZ\(0\);                                                                                  000121) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000122    CPI          PACKED\(8:3\) INZ\(0\);                                                                                  000122) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000123    FontSize     PACKED\(8:3\) INZ\(0\);                                                                                  000123) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000124                                                                                                                      000124) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000125    objNumberForPDF    INT\(10\) INZ\(0\); // counts up with newObject                                                    000125) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000126                                                                                                                      000126) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000127    PDF_FileName   VARCHAR\(257\) INZ\(''\);                                                                              000127) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000128    Ifs_handle        LIKE\(IFS_Open\) INZ\(-1\);                                                                         000128) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000129    Ifs_byteCount      INT\(10\) INZ\(0\);                                                                                000129) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000130                                                                                                                      000130) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000131    PageStream     VARCHAR\(64000:4\) CCSID\(*HEX\);                                                                      000131) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000132                                                                                                                      000132) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000133    Rotate          INT\(5\) INZ\(0\);                                                                                    000133) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+13 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 14 0 R /Parent 4 0 R >>
+endobj
+14 0 obj << /Length 45780 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      2) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                          S o u r c e   L i s t i n g) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(     1 **FREE                                                                                                               000001) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(     2 CTL-OPT NOMAIN                                                                                                       000002) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(     3         OPTION\(*NODEBUGIO:*SRCSTMT:*NOUNREF\)                                                                         000003) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000004         DATEDIT\(*YMD\) CCSID\(*EXACT\) CCSIDCVT\(*LIST:*EXCP\)                                                            000004) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000005         TEXT\('RPDFG - Functions to create a pdf file'\);                                                              000005) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000006 // -----------------------------------------------------------------------------                                     000006) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000007 // RPDFG - Functions to create a pdf file                                                                            000007) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000008 // https://ag1965.github.io/RPDFG/                                                                                   000008) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000009 // -----------------------------------------------------------------------------                                     000009) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000010                                                                                                                      000010) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000011 // as i'm using pointers to these, i can't define this DS as CONST. :-\(                                              000011) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(        * Compiler Options in Effect:                                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(        *  Text 'description' . . . . . . . :                                *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(        *                 RPDFG - Functions to create a pdf file             *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(        *  Generation severity level  . . . :   10                           *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(        *  Compiler options . . . . . . . . :   *XREF      *GEN              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(        *                                       *NOSECLVL  *SHOWCPY          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(        *                                       *EXPDDS    *EXT              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(        *                                       *NOSHOWSKP *SRCSTMT          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(        *                                       *NODEBUGIO *NOUNREF          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(        *                                       *NOEVENTF                    *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(        *  Optimization level . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(        *  Source listing indentation . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(        *  Type conversion options  . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(        *  Sort sequence  . . . . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(        *  Language identifier  . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(        *  Truncate numeric . . . . . . . . :   *YES                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(        *  Fix numeric  . . . . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(        *  Allow null values  . . . . . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(        *  Storage model . . .  . . . . . . :   *INHERIT                     *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(        *  Binding directory from Command . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(        *  Binding directory from Source  . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(        *  Enable performance collection  . :   *PEP                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(        *  Profiling data . . . . . . . . . :   *NOCOL                       *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(        *  Generate program interface . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(        *  Require prototype for export . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000012 Dcl-DS  PDF QUALIFIED;                                                                                               000012) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000013    HEADER                CHAR\( 8\) INZ\('%PDF-1.4'\);                                                                   000013) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000014    OBJ_STR               CHAR\( 3\) INZ\('obj'\);                                                                        000014) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000015    OBJ_END               CHAR\( 6\) INZ\('endobj'\);                                                                     000015) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000016    STREAM_STR            CHAR\( 6\) INZ\('stream'\);                                                                     000016) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000017    STREAM_END            CHAR\( 9\) INZ\('endstream'\);                                                                  000017) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000018    ARRAY_STR             CHAR\( 1\) INZ\('['\);                                                                          000018) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000019    ARRAY_END             CHAR\( 1\) INZ\(']'\);                                                                          000019) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000020    DICTIONARY_STR        CHAR\( 2\) INZ\('<<'\);                                                                         000020) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000021    DICTIONARY_END        CHAR\( 3\) INZ\(' >>'\);                                                                        000021) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      3) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000022    TEXTBLOCK_BEGIN       CHAR\( 2\) INZ\('BT'\);                                                                         000022) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000023    TEXTBLOCK_END         CHAR\( 2\) INZ\('ET'\);                                                                         000023) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000024    FONT_SELECT_NUMBER    CHAR\( 1\) INZ\('F'\);                                                                          000024) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000025    TEXT_FONT_RESSOURCE   CHAR\( 2\) INZ\('Tf'\);                                                                         000025) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000026    MATRIX_SCALE_1_1      CHAR\( 8\) INZ\('1 0 0 1 '\);                                                                   000026) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000027    TEXT_MATRIX           CHAR\( 2\) INZ\('Tm'\);                                                                         000027) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000028    TEXT_DRAW             CHAR\( 2\) INZ\('Tj'\);                                                                         000028) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000029    XREF                  CHAR\( 4\) INZ\('xref'\);                                                                       000029) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000030    TRAILER               CHAR\( 7\) INZ\('trailer'\);                                                                    000030) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000031    STARTXREF             CHAR\( 9\) INZ\('startxref'\);                                                                  000031) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000032    EOF                   CHAR\( 5\) INZ\('%%EOF'\);                                                                      000032) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000033 End-DS;                                                                                                              000033) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000034                                                                                                                      000034) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000035                                                                                                                      000035) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000036                                                                                                                      000036) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000037 Dcl-DS CCSID_JOBRUN CONST QUALIFIED;                                                                                 000037) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000038    SLASH          CHAR\(1\) INZ\('/'\) CCSID\(*JOBRUN\);                                                                   000038) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000039    COLON          CHAR\(1\) INZ\(':'\) CCSID\(*JOBRUN\);                                                                   000039) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000040    UNDERLINE      CHAR\(1\) INZ\('_'\) CCSID\(*JOBRUN\);                                                                   000040) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000041    BACKSLASH      CHAR\(1\) INZ\('\\'\) CCSID\(*JOBRUN\);                                                                   000041) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000042    BRACKET_OPEN   CHAR\(1\) INZ\('\('\) CCSID\(*JOBRUN\);                                                                   000042) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000043    BRACKET_CLOSE  CHAR\(1\) INZ\('\)'\) CCSID\(*JOBRUN\);                                                                   000043) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000044 End-DS;                                                                                                              000044) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000045                                                                                                                      000045) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000046 Dcl-DS CCSID_HEX    CONST QUALIFIED;                                                                                 000046) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000047    EOL            CHAR\(2\) INZ\(x'0D0A'\)           CCSID\(*HEX\);                                                        000047) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000048    HEADER_LINE2   CHAR\(7\) INZ\(x'25FFFFFFFF0D0A'\) CCSID\(*HEX\);                                                        000048) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000049 End-DS;                                                                                                              000049) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000050                                                                                                                      000050) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000051 Dcl-C  ADD_EOL  'EOL';                                                                                               000051) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000052                                                                                                                      000052) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000053 Dcl-S  RPDFGMSGF  CHAR\(21\) CONST CCSID\(*JOBRUN\) INZ\('*LIBL/RPDFGMSGF'\);                                              000053) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000054 Dcl-DS MSGID QUALIFIED CONST;                                                                                        000054) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000055    RPDF001     CHAR\(7\) INZ\('RPDF001'\) CCSID\(*JOBRUN\);                                                                000055) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000056    RPDF003     CHAR\(7\) INZ\('RPDF003'\) CCSID\(*JOBRUN\);                                                                000056) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000057    RPDF004     CHAR\(7\) INZ\('RPDF004'\) CCSID\(*JOBRUN\);                                                                000057) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000058    RPDF005     CHAR\(7\) INZ\('RPDF005'\) CCSID\(*JOBRUN\);                                                                000058) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000059    RPDF006     CHAR\(7\) INZ\('RPDF006'\) CCSID\(*JOBRUN\);                                                                000059) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000060    RPDF007     CHAR\(7\) INZ\('RPDF007'\) CCSID\(*JOBRUN\);                                                                000060) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000061    RPDF008     CHAR\(7\) INZ\('RPDF008'\) CCSID\(*JOBRUN\);                                                                000061) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000062    RPDF009     CHAR\(7\) INZ\('RPDF009'\) CCSID\(*JOBRUN\);                                                                000062) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000063 End-DS;                                                                                                              000063) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000064                                                                                                                      000064) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000065                                                                                                                      000065) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000066 // max. number of "Pages" objects in the "Pages" tree                                                                000066) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000067 Dcl-C  PAGES_PER_PAGES        5;                                                                                     000067) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000068 // max. number of "Page" objects in a "Pages" object                                                                 000068) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000069 Dcl-C  PAGE_PER_PAGES         5;                                                                                     000069) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000070                                                                                                                      000070) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000071 Dcl-C  SQL_OK                 0;                                                                                     000071) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000072 Dcl-C  SQL_ERROR_NOTFOUND     100;                                                                                   000072) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000073                                                                                                                      000073) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000074 Dcl-C  SPLFNBR_ONLY_NUM       0;                                                                                     000074) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000075 Dcl-C  SPLFNBR_LAST_NUM       -1;                                                                                    000075) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000076                                                                                                                      000076) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000077 Dcl-C  MM_IN_1_INCH      25.4000;                                                                                    000077) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      4) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000078 Dcl-C  POINTS_IN_1_INCH  72.0000;                                                                                    000078) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000079 Dcl-C  BORDER_IN_POINTS  14.1732; // 5mm in points \(1/72 inch\)                                                       000079) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000080                                                                                                                      000080) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000081 Dcl-ENum PAGRTT QUALIFIED;                                                                                           000081) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000082    AUTO              '*AUTO';                                                                                        000082) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000083    DEVD              '*DEVD';                                                                                        000083) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000084    COR               '*COR';                                                                                         000084) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000085    PORTRAIT          '0';                                                                                            000085) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000086    LANDSCAPE         '90';                                                                                           000086) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000087    PORTRAIT_REVERSE  '180';                                                                                          000087) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000088    LANDSCAPE_REVERSE '270';                                                                                          000088) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000089 End-ENum;                                                                                                            000089) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000090                                                                                                                      000090) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000091                                                                                                                      000091) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000092                                                                                                                      000092) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000093                                                                                                                      000093) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000094                                                                                                                      000094) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000095 Dcl-PR QCMDEXC EXTPGM\('QCMDEXC'\);                                                                                    000095) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000096    CmdString     CHAR\(32702\) CONST OPTIONS\(*VARSIZE\);                                                                000096) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000097    CmdLength   PACKED\(15:5\)  CONST;                                                                                  000097) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000098 End-PR;                                                                                                              000098) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000099                                                                                                                      000099) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000100 // -----------------------------------------------------------------------------                                     000100) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000101 // global fields                                                                                                     000101) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000102 // objects - this is a reusable pool                                                                                 000102) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000103 Dcl-DS RPDFG_g_obj     LIKEDS\(RPDFG_obj_T\) DIM\(100\) INZ\(*LIKEDS\);                                                    000103) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000104 Dcl-S  RPDFG_g_objIdx  LIKE\(RPDFG_objIdx_T\) Inz\(0\);                                                                  000104) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000105 // objects might contain dictionaries, this is a reusable pool                                                       000105) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000106 Dcl-DS RPDFG_g_dict    LIKEDS\(RPDFG_dict_T\) DIM\(100\) INZ\(*LIKEDS\);                                                   000106) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000107 Dcl-S  RPDFG_g_dictIdx LIKE\(RPDFG_dictIdx_T\) Inz\(0\);                                                                 000107) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000108                                                                                                                      000108) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000109 Dcl-DS g_PDF QUALIFIED;                                                                                              000109) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000110    // physical size pf the paper = MediaBox in PDF                                                                   000110) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000111    PaperHeight  PACKED\(8:3\) INZ\(0\);                                                                                  000111) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000112    PaperWidth   PACKED\(8:3\) INZ\(0\);                                                                                  000112) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000113    // margins \(5mm\)                                                                                                  000113) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000114    MarginTop    PACKED\(8:3\) INZ\(0\);                                                                                  000114) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000115    MarginBottom PACKED\(8:3\) INZ\(0\);                                                                                  000115) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000116    MarginLeft   PACKED\(8:3\) INZ\(0\);                                                                                  000116) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000117    MarginRight  PACKED\(8:3\) INZ\(0\);                                                                                  000117) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000118    // size of the printable area = CropBox in PDF                                                                    000118) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000119    PageHeight   PACKED\(8:3\) INZ\(0\);                                                                                  000119) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000120    PageWidth    PACKED\(8:3\) INZ\(0\);                                                                                  000120) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000121    LPI          PACKED\(8:3\) INZ\(0\);                                                                                  000121) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000122    CPI          PACKED\(8:3\) INZ\(0\);                                                                                  000122) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000123    FontSize     PACKED\(8:3\) INZ\(0\);                                                                                  000123) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000124                                                                                                                      000124) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000125    objNumberForPDF    INT\(10\) INZ\(0\); // counts up with newObject                                                    000125) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000126                                                                                                                      000126) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000127    PDF_FileName   VARCHAR\(257\) INZ\(''\);                                                                              000127) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000128    Ifs_handle        LIKE\(IFS_Open\) INZ\(-1\);                                                                         000128) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000129    Ifs_byteCount      INT\(10\) INZ\(0\);                                                                                000129) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000130                                                                                                                      000130) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000131    PageStream     VARCHAR\(64000:4\) CCSID\(*HEX\);                                                                      000131) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000132                                                                                                                      000132) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000133    Rotate          INT\(5\) INZ\(0\);                                                                                    000133) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      5) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000134                                                                                                                      000134) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000135    startxref       INT\(10\) INZ\(0\);                                                                                   000135) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000136    xrefByteOffset  INT\(10\) INZ\(0\) DIM\(100000\);                                                                       000136) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000137                                                                                                                      000137) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000138 End-DS;                                                                                                              000138) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000139                                                                                                                      000139) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000140                                                                                                                      000140) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000141                                                                                                                      000141) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000142 Dcl-DS SQL_Diag QUALIFIED;                                                                                           000142) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000143    MessageId        char\(10\) ;                                                                                       000143) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000144    MessageId1       varchar\(7\) ;                                                                                     000144) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000145    MessageId2       like\(SQL_Diag.MessageId1\) ;                                                                      000145) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000146    MessageLength    int\(5\) ;                                                                                         000146) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000147    MessageText      varchar\(32740\) ;                                                                                 000147) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000148    ReturnedSQLCode  char\(5\) ;                                                                                        000148) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000149    ReturnedSQLState char\(5\) ;                                                                                        000149) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000150    RowsCount        int\(10\) ;                                                                                        000150) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000151 End-DS;                                                                                                              000151) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000152                                                                                                                      000152) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000153 // Program Status Data Structure                                                                                     000153) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000154 Dcl-DS PSDS PSDS QUALIFIED;                                                                                          000154) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000155    JobName   CHAR\(10\) POS\(244\);                                                                                      000155) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000156    JobUser   CHAR\(10\) POS\(254\);                                                                                      000156) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000157    JobNumber CHAR\( 6\) POS\(264\);                                                                                      000157) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000158    CompileUDate CHAR\( 6\) POS\(288\);                                                                                   000158) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000159    CompileTime  CHAR\( 6\) POS\(294\);                                                                                   000159) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000160 End-DS;                                                                                                              000160) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000161                                                                                                                      000161) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000162 // message data for message ids RPDF0002 - RPDF0009                                                                  000162) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000163 Dcl-DS RPDF000n QUALIFIED;                                                                                           000163) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000164    idx        INT\(10\);                                                                                               000164) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000165    maxIdx     INT\(10\);                                                                                               000165) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000166    key        CHAR\(16\);                                                                                              000166) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000167    value1     CHAR\(128\);                                                                                             000167) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000168    value2     CHAR\(128\);                                                                                             000168) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000169 End-DS;                                                                                                              000169) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000170                                                                                                                      000170) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000171 // /INCLUDE 'QSRVCPY/RPDFG.RPGLEINC'                                                                                 000171) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000172 **END-FREE                                                                                                           000172) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000173 **FREE                                                                                                               000173) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000174 // Prototypings and templates for the RPDFG service program                                                          000174) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000175                                                                                                                      000175) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000176 Dcl-S  RPDFG_objIdx_T         INT\(10\) TEMPLATE;                                                                      000176) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000177 Dcl-S  RPDFG_dictIdx_T        INT\(10\) TEMPLATE;                                                                      000177) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000178 Dcl-S  RPDFG_32K_StringUTF8_T VARCHAR\(32000\) CCSID\(*UTF8\) TEMPLATE;                                                  000178) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000179                                                                                                                      000179) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000180 Dcl-S  RPDFG_FontSize_T       PACKED\(8:3\) INZ\(0\);                                                                    000180) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000181                                                                                                                      000181) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
+4 0 obj << /Type Pages /Parent 2 0 R /Kids [ 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R ] /Count 5 >>
+endobj
+16 0 obj << /Type Page /Resources << /Font << /F1 3 0 R >> >> /MediaBox [0 0 841.889 595.275] /Contents 17 0 R /Parent 15 0 R >>
+endobj
+17 0 obj << /Length 56983 >>
+stream
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(  Command  . . . . . . . . . . . . :   CRTRPGMOD) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(    Issued by  . . . . . . . . . . :     ANGO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(  Module . . . . . . . . . . . . . :   RPDFG) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(    Library  . . . . . . . . . . . :     ANGO1) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(  Text 'description' . . . . . . . :   *SRCMBRTXT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(  Source stream file   . . . . . . :   /QSYS.LIB/QTEMP.LIB/QSQLTEMP1.FILE/RPDFG.MBR) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(    CCSID  . . . . . . . . . . . . :     273) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(  Target CCSID . . . . . . . . . . :   *JOB \(273\)) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(  Text 'description' . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(  Last Change  . . . . . . . . . . :   26-03-30  13:11:03) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(  Generation severity level  . . . :   10) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(  Compiler options . . . . . . . . :   *XREF      *GEN       *NOSECLVL  *SHOWCPY) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(                                       *EXPDDS    *EXT       *NOSHOWSKP *NOSRCSTMT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(                                       *DEBUGIO   *UNREF     *NOEVENTF) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(  Debugging views  . . . . . . . . :   *LIST) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(  Debug encryption key . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(  Output . . . . . . . . . . . . . :   *PRINT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(  Optimization level . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(  Source listing indentation . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(  Type conversion options  . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(  Sort sequence  . . . . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(  Language identifier  . . . . . . :   *JOB) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(  Replace module . . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(  Authority  . . . . . . . . . . . :   *LIBCRTAUT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(  Truncate numeric . . . . . . . . :   *YES) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(  Fix numeric  . . . . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(  Target release . . . . . . . . . :   V7R5M0) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(  Allow null values  . . . . . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(  Storage model . . .  . . . . . . :   *INHERIT) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(  Binding directory  . . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(  Define condition names . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(  Enable performance collection  . :   *PEP) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(  Profiling data . . . . . . . . . :   *NOCOL) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(  Licensed Internal Code options . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(  Generate program interface . . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(  Include directory  . . . . . . . :) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(  Preprocessor options . . . . . . :   *NONE) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(  Require prototype for export . . :   *NO) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      2) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(                          S o u r c e   L i s t i n g) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(     1 **FREE                                                                                                               000001) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(     2 CTL-OPT NOMAIN                                                                                                       000002) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(     3         OPTION\(*NODEBUGIO:*SRCSTMT:*NOUNREF\)                                                                         000003) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000004         DATEDIT\(*YMD\) CCSID\(*EXACT\) CCSIDCVT\(*LIST:*EXCP\)                                                            000004) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000005         TEXT\('RPDFG - Functions to create a pdf file'\);                                                              000005) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000006 // -----------------------------------------------------------------------------                                     000006) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000007 // RPDFG - Functions to create a pdf file                                                                            000007) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000008 // https://ag1965.github.io/RPDFG/                                                                                   000008) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000009 // -----------------------------------------------------------------------------                                     000009) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000010                                                                                                                      000010) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000011 // as i'm using pointers to these, i can't define this DS as CONST. :-\(                                              000011) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(        * Compiler Options in Effect:                                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(        *  Text 'description' . . . . . . . :                                *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(        *                 RPDFG - Functions to create a pdf file             *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(        *  Generation severity level  . . . :   10                           *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(        *  Compiler options . . . . . . . . :   *XREF      *GEN              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(        *                                       *NOSECLVL  *SHOWCPY          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(        *                                       *EXPDDS    *EXT              *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(        *                                       *NOSHOWSKP *SRCSTMT          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(        *                                       *NODEBUGIO *NOUNREF          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(        *                                       *NOEVENTF                    *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(        *  Optimization level . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(        *  Source listing indentation . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(        *  Type conversion options  . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(        *  Sort sequence  . . . . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(        *  Language identifier  . . . . . . :   *JOB                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(        *  Authority  . . . . . . . . . . . :   *LIBCRTAUT                   *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(        *  Truncate numeric . . . . . . . . :   *YES                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(        *  Fix numeric  . . . . . . . . . . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(        *  Allow null values  . . . . . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(        *  Storage model . . .  . . . . . . :   *INHERIT                     *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(        *  Binding directory from Command . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(        *  Binding directory from Source  . :   *NONE                        *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(        *  Enable performance collection  . :   *PEP                         *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(        *  Profiling data . . . . . . . . . :   *NOCOL                       *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(        *  Generate program interface . . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(        *  Require prototype for export . . :   *NO                          *) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(        *--------------------------------------------------------------------*) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000012 Dcl-DS  PDF QUALIFIED;                                                                                               000012) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000013    HEADER                CHAR\( 8\) INZ\('%PDF-1.4'\);                                                                   000013) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000014    OBJ_STR               CHAR\( 3\) INZ\('obj'\);                                                                        000014) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000015    OBJ_END               CHAR\( 6\) INZ\('endobj'\);                                                                     000015) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000016    STREAM_STR            CHAR\( 6\) INZ\('stream'\);                                                                     000016) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000017    STREAM_END            CHAR\( 9\) INZ\('endstream'\);                                                                  000017) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000018    ARRAY_STR             CHAR\( 1\) INZ\('['\);                                                                          000018) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000019    ARRAY_END             CHAR\( 1\) INZ\(']'\);                                                                          000019) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000020    DICTIONARY_STR        CHAR\( 2\) INZ\('<<'\);                                                                         000020) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000021    DICTIONARY_END        CHAR\( 3\) INZ\(' >>'\);                                                                        000021) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      3) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000022    TEXTBLOCK_BEGIN       CHAR\( 2\) INZ\('BT'\);                                                                         000022) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000023    TEXTBLOCK_END         CHAR\( 2\) INZ\('ET'\);                                                                         000023) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000024    FONT_SELECT_NUMBER    CHAR\( 1\) INZ\('F'\);                                                                          000024) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000025    TEXT_FONT_RESSOURCE   CHAR\( 2\) INZ\('Tf'\);                                                                         000025) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000026    MATRIX_SCALE_1_1      CHAR\( 8\) INZ\('1 0 0 1 '\);                                                                   000026) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000027    TEXT_MATRIX           CHAR\( 2\) INZ\('Tm'\);                                                                         000027) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000028    TEXT_DRAW             CHAR\( 2\) INZ\('Tj'\);                                                                         000028) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000029    XREF                  CHAR\( 4\) INZ\('xref'\);                                                                       000029) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000030    TRAILER               CHAR\( 7\) INZ\('trailer'\);                                                                    000030) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000031    STARTXREF             CHAR\( 9\) INZ\('startxref'\);                                                                  000031) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000032    EOF                   CHAR\( 5\) INZ\('%%EOF'\);                                                                      000032) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000033 End-DS;                                                                                                              000033) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000034                                                                                                                      000034) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000035                                                                                                                      000035) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000036                                                                                                                      000036) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000037 Dcl-DS CCSID_JOBRUN CONST QUALIFIED;                                                                                 000037) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000038    SLASH          CHAR\(1\) INZ\('/'\) CCSID\(*JOBRUN\);                                                                   000038) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000039    COLON          CHAR\(1\) INZ\(':'\) CCSID\(*JOBRUN\);                                                                   000039) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000040    UNDERLINE      CHAR\(1\) INZ\('_'\) CCSID\(*JOBRUN\);                                                                   000040) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000041    BACKSLASH      CHAR\(1\) INZ\('\\'\) CCSID\(*JOBRUN\);                                                                   000041) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000042    BRACKET_OPEN   CHAR\(1\) INZ\('\('\) CCSID\(*JOBRUN\);                                                                   000042) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000043    BRACKET_CLOSE  CHAR\(1\) INZ\('\)'\) CCSID\(*JOBRUN\);                                                                   000043) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000044 End-DS;                                                                                                              000044) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000045                                                                                                                      000045) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000046 Dcl-DS CCSID_HEX    CONST QUALIFIED;                                                                                 000046) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000047    EOL            CHAR\(2\) INZ\(x'0D0A'\)           CCSID\(*HEX\);                                                        000047) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000048    HEADER_LINE2   CHAR\(7\) INZ\(x'25FFFFFFFF0D0A'\) CCSID\(*HEX\);                                                        000048) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000049 End-DS;                                                                                                              000049) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000050                                                                                                                      000050) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000051 Dcl-C  ADD_EOL  'EOL';                                                                                               000051) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000052                                                                                                                      000052) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000053 Dcl-S  RPDFGMSGF  CHAR\(21\) CONST CCSID\(*JOBRUN\) INZ\('*LIBL/RPDFGMSGF'\);                                              000053) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000054 Dcl-DS MSGID QUALIFIED CONST;                                                                                        000054) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000055    RPDF001     CHAR\(7\) INZ\('RPDF001'\) CCSID\(*JOBRUN\);                                                                000055) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000056    RPDF003     CHAR\(7\) INZ\('RPDF003'\) CCSID\(*JOBRUN\);                                                                000056) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000057    RPDF004     CHAR\(7\) INZ\('RPDF004'\) CCSID\(*JOBRUN\);                                                                000057) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000058    RPDF005     CHAR\(7\) INZ\('RPDF005'\) CCSID\(*JOBRUN\);                                                                000058) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000059    RPDF006     CHAR\(7\) INZ\('RPDF006'\) CCSID\(*JOBRUN\);                                                                000059) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000060    RPDF007     CHAR\(7\) INZ\('RPDF007'\) CCSID\(*JOBRUN\);                                                                000060) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000061    RPDF008     CHAR\(7\) INZ\('RPDF008'\) CCSID\(*JOBRUN\);                                                                000061) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000062    RPDF009     CHAR\(7\) INZ\('RPDF009'\) CCSID\(*JOBRUN\);                                                                000062) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000063 End-DS;                                                                                                              000063) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000064                                                                                                                      000064) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000065                                                                                                                      000065) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000066 // max. number of "Pages" objects in the "Pages" tree                                                                000066) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000067 Dcl-C  PAGES_PER_PAGES        5;                                                                                     000067) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000068 // max. number of "Page" objects in a "Pages" object                                                                 000068) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000069 Dcl-C  PAGE_PER_PAGES         5;                                                                                     000069) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000070                                                                                                                      000070) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000071 Dcl-C  SQL_OK                 0;                                                                                     000071) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000072 Dcl-C  SQL_ERROR_NOTFOUND     100;                                                                                   000072) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000073                                                                                                                      000073) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000074 Dcl-C  SPLFNBR_ONLY_NUM       0;                                                                                     000074) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000075 Dcl-C  SPLFNBR_LAST_NUM       -1;                                                                                    000075) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000076                                                                                                                      000076) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000077 Dcl-C  MM_IN_1_INCH      25.4000;                                                                                    000077) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      4) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000078 Dcl-C  POINTS_IN_1_INCH  72.0000;                                                                                    000078) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000079 Dcl-C  BORDER_IN_POINTS  14.1732; // 5mm in points \(1/72 inch\)                                                       000079) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000080                                                                                                                      000080) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000081 Dcl-ENum PAGRTT QUALIFIED;                                                                                           000081) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000082    AUTO              '*AUTO';                                                                                        000082) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000083    DEVD              '*DEVD';                                                                                        000083) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000084    COR               '*COR';                                                                                         000084) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000085    PORTRAIT          '0';                                                                                            000085) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000086    LANDSCAPE         '90';                                                                                           000086) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000087    PORTRAIT_REVERSE  '180';                                                                                          000087) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000088    LANDSCAPE_REVERSE '270';                                                                                          000088) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000089 End-ENum;                                                                                                            000089) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000090                                                                                                                      000090) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000091                                                                                                                      000091) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000092                                                                                                                      000092) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000093                                                                                                                      000093) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000094                                                                                                                      000094) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000095 Dcl-PR QCMDEXC EXTPGM\('QCMDEXC'\);                                                                                    000095) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000096    CmdString     CHAR\(32702\) CONST OPTIONS\(*VARSIZE\);                                                                000096) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000097    CmdLength   PACKED\(15:5\)  CONST;                                                                                  000097) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000098 End-PR;                                                                                                              000098) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000099                                                                                                                      000099) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000100 // -----------------------------------------------------------------------------                                     000100) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000101 // global fields                                                                                                     000101) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000102 // objects - this is a reusable pool                                                                                 000102) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000103 Dcl-DS RPDFG_g_obj     LIKEDS\(RPDFG_obj_T\) DIM\(100\) INZ\(*LIKEDS\);                                                    000103) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000104 Dcl-S  RPDFG_g_objIdx  LIKE\(RPDFG_objIdx_T\) Inz\(0\);                                                                  000104) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000105 // objects might contain dictionaries, this is a reusable pool                                                       000105) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000106 Dcl-DS RPDFG_g_dict    LIKEDS\(RPDFG_dict_T\) DIM\(100\) INZ\(*LIKEDS\);                                                   000106) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000107 Dcl-S  RPDFG_g_dictIdx LIKE\(RPDFG_dictIdx_T\) Inz\(0\);                                                                 000107) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000108                                                                                                                      000108) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000109 Dcl-DS g_PDF QUALIFIED;                                                                                              000109) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000110    // physical size pf the paper = MediaBox in PDF                                                                   000110) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000111    PaperHeight  PACKED\(8:3\) INZ\(0\);                                                                                  000111) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000112    PaperWidth   PACKED\(8:3\) INZ\(0\);                                                                                  000112) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000113    // margins \(5mm\)                                                                                                  000113) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000114    MarginTop    PACKED\(8:3\) INZ\(0\);                                                                                  000114) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000115    MarginBottom PACKED\(8:3\) INZ\(0\);                                                                                  000115) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000116    MarginLeft   PACKED\(8:3\) INZ\(0\);                                                                                  000116) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000117    MarginRight  PACKED\(8:3\) INZ\(0\);                                                                                  000117) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000118    // size of the printable area = CropBox in PDF                                                                    000118) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000119    PageHeight   PACKED\(8:3\) INZ\(0\);                                                                                  000119) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000120    PageWidth    PACKED\(8:3\) INZ\(0\);                                                                                  000120) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000121    LPI          PACKED\(8:3\) INZ\(0\);                                                                                  000121) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000122    CPI          PACKED\(8:3\) INZ\(0\);                                                                                  000122) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000123    FontSize     PACKED\(8:3\) INZ\(0\);                                                                                  000123) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000124                                                                                                                      000124) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000125    objNumberForPDF    INT\(10\) INZ\(0\); // counts up with newObject                                                    000125) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000126                                                                                                                      000126) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000127    PDF_FileName   VARCHAR\(257\) INZ\(''\);                                                                              000127) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000128    Ifs_handle        LIKE\(IFS_Open\) INZ\(-1\);                                                                         000128) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000129    Ifs_byteCount      INT\(10\) INZ\(0\);                                                                                000129) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000130                                                                                                                      000130) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000131    PageStream     VARCHAR\(64000:4\) CCSID\(*HEX\);                                                                      000131) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000132                                                                                                                      000132) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000133    Rotate          INT\(5\) INZ\(0\);                                                                                    000133) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      5) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000134                                                                                                                      000134) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000135    startxref       INT\(10\) INZ\(0\);                                                                                   000135) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000136    xrefByteOffset  INT\(10\) INZ\(0\) DIM\(100000\);                                                                       000136) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000137                                                                                                                      000137) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000138 End-DS;                                                                                                              000138) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000139                                                                                                                      000139) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000140                                                                                                                      000140) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000141                                                                                                                      000141) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000142 Dcl-DS SQL_Diag QUALIFIED;                                                                                           000142) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000143    MessageId        char\(10\) ;                                                                                       000143) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000144    MessageId1       varchar\(7\) ;                                                                                     000144) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000145    MessageId2       like\(SQL_Diag.MessageId1\) ;                                                                      000145) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000146    MessageLength    int\(5\) ;                                                                                         000146) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000147    MessageText      varchar\(32740\) ;                                                                                 000147) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000148    ReturnedSQLCode  char\(5\) ;                                                                                        000148) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000149    ReturnedSQLState char\(5\) ;                                                                                        000149) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000150    RowsCount        int\(10\) ;                                                                                        000150) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000151 End-DS;                                                                                                              000151) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000152                                                                                                                      000152) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000153 // Program Status Data Structure                                                                                     000153) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000154 Dcl-DS PSDS PSDS QUALIFIED;                                                                                          000154) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000155    JobName   CHAR\(10\) POS\(244\);                                                                                      000155) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000156    JobUser   CHAR\(10\) POS\(254\);                                                                                      000156) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000157    JobNumber CHAR\( 6\) POS\(264\);                                                                                      000157) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000158    CompileUDate CHAR\( 6\) POS\(288\);                                                                                   000158) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000159    CompileTime  CHAR\( 6\) POS\(294\);                                                                                   000159) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000160 End-DS;                                                                                                              000160) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000161                                                                                                                      000161) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000162 // message data for message ids RPDF0002 - RPDF0009                                                                  000162) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000163 Dcl-DS RPDF000n QUALIFIED;                                                                                           000163) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000164    idx        INT\(10\);                                                                                               000164) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000165    maxIdx     INT\(10\);                                                                                               000165) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000166    key        CHAR\(16\);                                                                                              000166) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000167    value1     CHAR\(128\);                                                                                             000167) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000168    value2     CHAR\(128\);                                                                                             000168) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000169 End-DS;                                                                                                              000169) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000170                                                                                                                      000170) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000171 // /INCLUDE 'QSRVCPY/RPDFG.RPGLEINC'                                                                                 000171) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000172 **END-FREE                                                                                                           000172) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(Line   <---------------------- Source Specifications ----------------------------><---- Comments ----> Do  Page  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(Number ....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10 Num Line  Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000173 **FREE                                                                                                               000173) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000174 // Prototypings and templates for the RPDFG service program                                                          000174) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000175                                                                                                                      000175) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000176 Dcl-S  RPDFG_objIdx_T         INT\(10\) TEMPLATE;                                                                      000176) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000177 Dcl-S  RPDFG_dictIdx_T        INT\(10\) TEMPLATE;                                                                      000177) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000178 Dcl-S  RPDFG_32K_StringUTF8_T VARCHAR\(32000\) CCSID\(*UTF8\) TEMPLATE;                                                  000178) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000179                                                                                                                      000179) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000180 Dcl-S  RPDFG_FontSize_T       PACKED\(8:3\) INZ\(0\);                                                                    000180) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000181                                                                                                                      000181) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstreamBT
+/F1 6.441 Tf
+1 0 0 1 14.173 558.340 Tm
+( 5770WDS V7R5M0  220415 RN        IBM ILE RPG             ANGO1/RPDFG              PUB400     26-03-30 13:11:03        Page      6) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 541.162 Tm
+(Line   <---------------------- Source Specifications ----------------------------------------------------->  Do  Change Src Seq) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 532.573 Tm
+(Number ....+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....8....+....9....+...10  Num Date   Id  Number) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 523.984 Tm
+(000182 Dcl-DS RPDFG_SplfAtr_T QUALIFIED TEMPLATE;                                                                           000182) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 515.395 Tm
+(000183    OutqName        VARCHAR\(10\);                                                                                      000183) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 506.806 Tm
+(000184    OutqLib         VARCHAR\(10\);                                                                                      000184) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 498.217 Tm
+(000185    SplfName        VARCHAR\(10\);                                                                                      000185) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 489.628 Tm
+(000186    SplfNbr         INT\(10\);                                                                                          000186) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 481.039 Tm
+(000187    UserName        VARCHAR\(10\);                                                                                      000187) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 472.450 Tm
+(000188    UserData        VARCHAR\(10\);                                                                                      000188) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 463.861 Tm
+(000189    Job_Name        VARCHAR\(28\);                                                                                      000189) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 455.272 Tm
+(000190    CreateTimestamp TIMESTAMP\(0\);                                                                                     000190) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 446.683 Tm
+(000191    Total_Pages     INT\(10\);                                                                                          000191) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 438.094 Tm
+(000192    FormType        VARCHAR\(10\);                                                                                      000192) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 429.505 Tm
+(000193    Page_Length     INT\(10\);                                                                                          000193) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 420.916 Tm
+(000194    Page_Width      INT\(10\);                                                                                          000194) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 412.327 Tm
+(000195    Page_Rotation   VARCHAR\(5\);                                                                                       000195) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 403.738 Tm
+(000196 End-DS;                                                                                                              000196) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 395.149 Tm
+(000197                                                                                                                      000197) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 386.560 Tm
+(000198 Dcl-DS RPDFG_Margins_T QUALIFIED TEMPLATE;                                                                           000198) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 377.971 Tm
+(000199    NbrOfElems       INT\(5\);                                                                                          000199) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 369.382 Tm
+(000200    // all margins in "points" \(= 1/72 inch\)                                                                          000200) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 360.793 Tm
+(000201    Left          PACKED\(8:3\);                                                                                        000201) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 352.204 Tm
+(000202    Top           PACKED\(8:3\);                                                                                        000202) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 343.615 Tm
+(000203    Right         PACKED\(8:3\);                                                                                        000203) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 335.026 Tm
+(000204    Bottom        PACKED\(8:3\);                                                                                        000204) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 326.437 Tm
+(000205 End-DS;                                                                                                              000205) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 317.848 Tm
+(000206                                                                                                                      000206) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 309.259 Tm
+(000207 Dcl-DS RPDFG_obj_T QUALIFIED TEMPLATE;                                                                               000207) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 300.670 Tm
+(000208    inUse                  IND INZ\(*OFF\);                                                                             000208) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 292.081 Tm
+(000209    objNumberForPDF    INT\(10\) INZ\(-1\); // this is different from the index!                                          000209) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 283.492 Tm
+(000210    SpecialMode        CHAR\(1\) INZ\(RPDFG_SPECIAL_OBJECT.NONE\);                                                        000210) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 274.903 Tm
+(000211    isArray            CHAR\(1\) INZ\(*OFF\);                                                                             000211) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 266.314 Tm
+(000212    Parent             LIKE\(RPDFG_ref\) INZ\(''\);                                                                       000212) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 257.725 Tm
+(000213    Kids               LIKE\(RPDFG_ref\) INZ\(''\) DIM\(50\);                                                               000213) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 249.136 Tm
+(000214    NbrOfKids          INT\(10\) INZ\(0\);                                                                                000214) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 240.547 Tm
+(000215    dictIdx            INT\(10\) INZ\(-1\);                                                                               000215) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 231.958 Tm
+(000216    // PtrDict            POINTER INZ\(*NULL\);                                                                         000216) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 223.369 Tm
+(000217    // PtrStream          POINTER INZ\(*NULL\);                                                                         000217) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 214.780 Tm
+(000218    // Content       VARCHAR\(1000\);                                                                                   000218) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 206.191 Tm
+(000219    // ContentSep    VARCHAR\(1\);                                                                                      000219) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 197.602 Tm
+(000220 End-DS;                                                                                                              000220) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 189.013 Tm
+(000221                                                                                                                      000221) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 180.424 Tm
+(000222 Dcl-DS RPDFG_dict_T QUALIFIED TEMPLATE;                                                                              000222) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 171.835 Tm
+(000223    inUse                  IND INZ\(*OFF\);                                                                             000223) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 163.246 Tm
+(000224    NbrOfDictEntries   INT\(10\) INZ\(0\);                                                                                000224) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 154.657 Tm
+(000225    DictKeys     VARCHAR\(  16\) DIM\(32\) INZ\(''\);                                                                       000225) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 146.068 Tm
+(000226    DictValues   VARCHAR\(1024\) DIM\(32\) INZ\(''\);                                                                       000226) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 137.479 Tm
+(000227    PtrDictInDict      POINTER INZ\(*NULL\);                                                                            000227) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 128.890 Tm
+(000228 End-DS;                                                                                                              000228) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 120.301 Tm
+(000229                                                                                                                      000229) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 111.712 Tm
+(000230 Dcl-ENum RPDFG_SPECIAL_OBJECT QUALIFIED;                                                                             000230) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 103.123 Tm
+(000231    NONE        ' ';                                                                                                  000231) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 94.534 Tm
+(000232    CONTENTS    'C';                                                                                                  000232) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 85.945 Tm
+(000233    INTERNAL    'I';                                                                                                  000233) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 77.356 Tm
+(000234    TRAILER     'T';                                                                                                  000234) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 68.767 Tm
+(000235    XREF        'X';                                                                                                  000235) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 60.178 Tm
+(000236 End-ENum;                                                                                                            000236) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 51.589 Tm
+(000237                                                                                                                      000237) Tj
+ET
+BT
+/F1 6.441 Tf
+1 0 0 1 14.173 34.411 Tm
+(                                                   -=* http://pub400.com *=-) Tj
+ET
+endstream
+endobj
